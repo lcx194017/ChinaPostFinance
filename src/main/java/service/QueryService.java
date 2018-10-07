@@ -9,10 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author lcx :liu.changxin@qq.com
@@ -37,9 +34,10 @@ public class QueryService {
 
     /**依据前端选择条件，动态查询，params为HashMap结构
      * params:可能但不完全包括 startTime, endTime, department, group
-     *department, group 的类型是list*/
+     *department, group 的类型是list
+     * 把查询结果放进Map中作为返回值，做下一步的处理*/
     @Transactional(readOnly = true)
-    public void OperationAreaDynamicQuery(HashMap<String, Object> params)
+    public Map<String, Object> operationAreaDynamicQuery(HashMap<String, Object> params)
             throws RecordInvalidException {
         List<Employee> employeeList = employeeDao.getEmployeeByDynamicCondition(params);
         List<SalaryDetail> salaryDetailList = new LinkedList<>();
@@ -51,5 +49,9 @@ public class QueryService {
                 throw new RecordInvalidException("employee 和 salary_detail数据表信息不对等");
             salaryDetailList.addAll(list);
         }
+        Map<String, Object> resultMap = new HashMap<>();
+        resultMap.put("employeeList", employeeList);
+        resultMap.put("salaryDetailList", salaryDetailList);
+        return resultMap;
     }
 }

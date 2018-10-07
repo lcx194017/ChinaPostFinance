@@ -10,27 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43515eba-a19e-4db3-934d-7beace7196ad" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exception/RecordInvalidException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/QueryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/SalaryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/dao/SalaryDetailDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/service/QueryServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/EmployeeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/EmployeeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/SalaryDetailDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/SalaryDetailDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/QueryDataPro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/QueryDataPro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/DataParse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/DataParse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/QueryDataPro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/QueryDataHandle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/QueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/QueryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/SalaryDetailDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/SalaryDetailDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/smart-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/smart-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/EmployeeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/EmployeeDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/SalaryDetailDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/SalaryDetailDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-mapper/EmployeeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-mapper/EmployeeDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-mapper/SalaryDetailDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-mapper/SalaryDetailDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/smart-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/smart-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/dao/EmployeeDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/dao/EmployeeDaoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/service/DataParseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/service/DataParseTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -42,6 +30,32 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DockManager">
+    <window id="2">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/main/java/domain/Employee.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="351">
+                    <caret line="21" column="26" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="26" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="SalaryDetail.java" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/main/java/domain/SalaryDetail.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="-255">
+                    <caret line="79" column="33" lean-forward="true" selection-start-line="79" selection-start-column="33" selection-end-line="79" selection-end-column="33" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
     <window id="1">
       <content type="file-editors">
         <state>
@@ -49,8 +63,8 @@
             <file leaf-file-name="SalaryDetailDao.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/main/java/dao/SalaryDetailDao.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="486">
-                    <caret line="24" column="49" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="49" />
+                  <state relative-caret-position="244">
+                    <caret line="11" column="16" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="16" />
                     <folding>
                       <element signature="imports" expanded="true" />
                     </folding>
@@ -61,8 +75,8 @@
             <file leaf-file-name="EmployeeDao.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/main/java/dao/EmployeeDao.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="462">
-                    <caret line="35" column="33" lean-forward="true" selection-start-line="34" selection-start-column="7" selection-end-line="35" selection-end-column="33" />
+                  <state relative-caret-position="216">
+                    <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
                   </state>
                 </provider>
               </entry>
@@ -77,8 +91,8 @@
       <file leaf-file-name="EmployeeDao.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="582">
-              <caret line="81" column="38" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
+            <state relative-caret-position="351">
+              <caret line="85" selection-start-line="85" selection-end-line="85" />
               <folding>
                 <element signature="n#insert#0;n#mapper#0;n#!!top" />
                 <element signature="n#insert#1;n#mapper#0;n#!!top" />
@@ -87,16 +101,27 @@
                 <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
                 <element signature="n#select#1;n#mapper#0;n#!!top" />
                 <element signature="n#select#2;n#mapper#0;n#!!top" />
+                <element signature="n#select#3;n#mapper#0;n#!!top" />
+                <element signature="n#select#4;n#mapper#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataParse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/DataParse.java">
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="145" column="5" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
+            <state relative-caret-position="150">
+              <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataParse.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/DataParse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="339">
+              <caret line="97" column="19" selection-start-line="97" selection-start-column="19" selection-end-line="97" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,52 +129,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SalaryService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/SalaryService.java">
+      <file leaf-file-name="String.java" pinned="false" current-in-tab="false">
+        <entry file="jar://D:/Java/jdk-9.0.4/lib/src.zip!/java.base/java/lang/String.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="40" column="32" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="40" selection-end-column="32" />
+            <state relative-caret-position="318">
+              <caret line="1995" column="18" selection-start-line="1995" selection-start-column="18" selection-end-line="1995" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QueryDataHandle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/QueryDataHandle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="51" column="10" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#getSalaryDetailValidData#0;class#QueryDataHandle#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SalaryDetailDao.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/SalaryDetailDao.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="157" column="42" selection-start-line="157" selection-start-column="16" selection-end-line="157" selection-end-column="42" />
-              <folding>
-                <element signature="n#insert#0;n#mapper#0;n#!!top" />
-                <element signature="n#insert#1;n#mapper#0;n#!!top" />
-                <element signature="n#foreach#0;n#insert#1;n#mapper#0;n#!!top" />
-                <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QueryDataPro.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/QueryDataPro.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="135" column="42" selection-start-line="135" selection-start-column="42" selection-end-line="135" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#getEmployeeValidData#0;class#QueryDataPro#0" />
-                <element signature="method#getSalaryDetailValidData#0;class#QueryDataPro#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SalaryDetailDaoTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SalaryDetailDaoTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/test/dao/SalaryDetailDaoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="41" column="42" lean-forward="true" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
+            <state relative-caret-position="120">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
             </state>
           </provider>
         </entry>
@@ -157,8 +163,8 @@
       <file leaf-file-name="QueryService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/QueryService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="51" column="42" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
+            <state relative-caret-position="27">
+              <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#377#378#0" expanded="true" />
@@ -170,20 +176,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/domain/Employee.java">
+      <file leaf-file-name="QueryServiceTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/test/service/QueryServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="28" column="24" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="smart-context.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/smart-context.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="31" selection-end-column="27" />
+            <state relative-caret-position="293">
+              <caret line="51" selection-start-line="51" selection-end-line="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -191,11 +191,20 @@
       <file leaf-file-name="EmployeeDaoTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="93" selection-start-line="93" selection-end-line="93" />
+            <state relative-caret-position="123">
+              <caret line="79" column="8" lean-forward="true" selection-start-line="79" selection-start-column="8" selection-end-line="91" selection-end-column="34" />
               <folding>
                 <element signature="method#insertEmployee#0;class#EmployeeDaoTest#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="smart-context.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/smart-context.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -208,8 +217,8 @@
         <option value="spring-beans.schema" />
         <option value="Interface" />
         <option value="mapper" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -242,13 +251,17 @@
         <option value="$PROJECT_DIR$/src/main/java/exception/RecordExistException.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/EmployeeDao.java" />
         <option value="$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/service/SalaryService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/SalaryDetailDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/dao/SalaryDetailDao.java" />
         <option value="$PROJECT_DIR$/src/main/test/dao/SalaryDetailDaoTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/QueryService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/QueryDataPro.java" />
         <option value="$PROJECT_DIR$/src/main/resources/smart-context.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/service/QueryService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/QueryDataHandle.java" />
+        <option value="$PROJECT_DIR$/src/main/test/service/QueryServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/DataParse.java" />
       </list>
     </option>
   </component>
@@ -278,7 +291,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1456" />
@@ -318,6 +331,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChinaPostFinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChinaPostFinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ChinaPostFinance" type="b2602c69:ProjectViewProjectNode" />
@@ -389,6 +410,21 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ChinaPostFinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChinaPostFinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChinaPostFinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChinaPostFinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -411,15 +447,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="dao" />
       <recent name="service" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
+      <recent name="dao" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="service" />
       <recent name="domain" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\IdeaProjects\ChinaPostFinance\src\main\resources" />
@@ -439,7 +475,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SalaryDetailDaoTest.getSalaryDetailByIDAndDate">
+  <component name="RunManager" selected="JUnit.QueryServiceTest.operationAreaDynamicQuery">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -489,19 +525,19 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="EmployeeDaoTest.getEmployeeByLinkAndDateRange" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QueryServiceTest.operationAreaDynamicQuery" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ChinaPostFinance" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dao.*" />
+          <option name="PATTERN" value="service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="dao" />
-      <option name="MAIN_CLASS_NAME" value="dao.EmployeeDaoTest" />
-      <option name="METHOD_NAME" value="getEmployeeByLinkAndDateRange" />
+      <option name="PACKAGE_NAME" value="service" />
+      <option name="MAIN_CLASS_NAME" value="service.QueryServiceTest" />
+      <option name="METHOD_NAME" value="operationAreaDynamicQuery" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -671,17 +707,17 @@
       <item itemvalue="Tomcat Server.Running" />
       <item itemvalue="JUnit.SalaryDetailDaoTest.getSalaryByDateRange" />
       <item itemvalue="JUnit.EmployeeDaoTest.getEmployeeByLink" />
-      <item itemvalue="JUnit.EmployeeDaoTest.getEmployeeByLinkAndDateRange" />
       <item itemvalue="JUnit.EmployeeDaoTest.getEmployeeByDynamicCondition" />
       <item itemvalue="JUnit.SalaryDetailDaoTest.getSalaryDetailByIDAndDate" />
+      <item itemvalue="JUnit.QueryServiceTest.operationAreaDynamicQuery" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.QueryServiceTest.operationAreaDynamicQuery" />
         <item itemvalue="JUnit.SalaryDetailDaoTest.getSalaryDetailByIDAndDate" />
         <item itemvalue="JUnit.EmployeeDaoTest.getEmployeeByDynamicCondition" />
         <item itemvalue="JUnit.SalaryDetailDaoTest.getSalaryByDateRange" />
         <item itemvalue="JUnit.EmployeeDaoTest.getEmployeeByLink" />
-        <item itemvalue="JUnit.EmployeeDaoTest.getEmployeeByLinkAndDateRange" />
       </list>
     </recent_temporary>
   </component>
@@ -702,20 +738,19 @@
       <workItem from="1538746014972" duration="679000" />
       <workItem from="1538785691405" duration="114000" />
       <workItem from="1538789178052" duration="24601000" />
-      <workItem from="1538869322562" duration="2455000" />
+      <workItem from="1538869322562" duration="14214000" />
     </task>
+    <task id="LOCAL-00001" summary="完成数据表的动态查询">
+      <created>1538871865162</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1538871865162</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SalaryDetailDaoTest_getSalaryByDateRange - 2018.10.07 at 07h 45m 49s.xml">
-      <configuration name="SalaryDetailDaoTest.getSalaryByDateRange" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EmployeeDaoTest_getEmployeeByDynamicCondition - 2018.10.07 at 07h 46m 11s.xml">
-      <configuration name="EmployeeDaoTest.getEmployeeByDynamicCondition" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EmployeeDaoTest_getEmployeeByDynamicCondition - 2018.10.07 at 07h 51m 41s.xml">
-      <configuration name="EmployeeDaoTest.getEmployeeByDynamicCondition" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="EmployeeDaoTest_getEmployeeByDynamicCondition - 2018.10.07 at 07h 51m 45s.xml">
       <configuration name="EmployeeDaoTest.getEmployeeByDynamicCondition" configurationId="JUnit" />
     </history-entry>
@@ -737,12 +772,21 @@
     <history-entry file="SalaryDetailDaoTest_getSalaryDetailByIDAndDate - 2018.10.07 at 08h 22m 55s.xml">
       <configuration name="SalaryDetailDaoTest.getSalaryDetailByIDAndDate" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SalaryDetailDaoTest_getSalaryDetailByIDAndDate - 2018.10.07 at 21h 02m 19s.xml">
+      <configuration name="SalaryDetailDaoTest.getSalaryDetailByIDAndDate" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="QueryServiceTest_operationAreaDynamicQuery - 2018.10.07 at 21h 03m 21s.xml">
+      <configuration name="QueryServiceTest.operationAreaDynamicQuery" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="QueryServiceTest_operationAreaDynamicQuery - 2018.10.07 at 21h 46m 31s.xml">
+      <configuration name="QueryServiceTest.operationAreaDynamicQuery" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50824000" />
+    <option name="totallyTimeSpent" value="62583000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
@@ -756,7 +800,7 @@
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="11" visible="true" weight="0.39891452" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.39891452" />
       <window_info anchor="bottom" id="TODO" order="14" />
       <window_info anchor="bottom" id="Messages" order="3" weight="0.3283582" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
@@ -767,7 +811,7 @@
       <window_info anchor="bottom" id="Run" order="9" weight="0.3292683" />
       <window_info anchor="bottom" id="Spring" order="1" />
       <window_info anchor="bottom" id="Terminal" order="2" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.27507162" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.22492836" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -785,20 +829,18 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="完成数据表的动态查询" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成数据表的动态查询" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/test/service/DataParseTest.java</url>
-          <line>34</line>
+          <line>35</line>
           <properties />
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/service/DataParse.java</url>
-          <line>32</line>
-          <properties />
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java</url>
@@ -824,31 +866,17 @@
           <properties />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/test/service/QueryServiceTest.java</url>
+          <line>51</line>
+          <properties />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="16" />
+      <option name="time" value="18" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="18" column="18" selection-start-line="12" selection-start-column="4" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/SalaryDetailDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="76" column="39" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="39" />
-          <folding>
-            <element signature="n#insert#0;n#mapper#0;n#!!top" />
-            <element signature="n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#foreach#0;n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/SalaryDetailDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -859,7 +887,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/DataParse.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/DataParse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3645">
           <caret line="145" column="5" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
@@ -869,7 +897,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/QueryDataPro.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/QueryDataHandle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
           <caret line="135" column="57" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="57" />
@@ -949,7 +977,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/DataParse.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/DataParse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3645">
           <caret line="145" column="5" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
@@ -959,7 +987,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/QueryDataPro.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/QueryDataHandle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
           <caret line="135" column="57" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="57" />
@@ -1039,7 +1067,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/DataParse.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/DataParse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3645">
           <caret line="145" column="5" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
@@ -1049,7 +1077,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/QueryDataPro.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/QueryDataHandle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
           <caret line="135" column="57" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="57" />
@@ -1107,27 +1135,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="127" column="17" selection-start-line="127" selection-start-column="17" selection-end-line="127" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/service/DataParseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="32" column="33" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1148,85 +1159,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/SalaryDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="384" selection-start-line="384" selection-end-line="384" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="93" selection-start-line="93" selection-end-line="93" />
-          <folding>
-            <element signature="method#insertEmployee#0;class#EmployeeDaoTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/DataParse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="145" column="5" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/QueryDataPro.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="135" column="42" selection-start-line="135" selection-start-column="42" selection-end-line="135" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getEmployeeValidData#0;class#QueryDataPro#0" />
-            <element signature="method#getSalaryDetailValidData#0;class#QueryDataPro#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/SalaryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="40" column="32" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="40" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="28" column="24" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="81" column="38" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
-          <folding>
-            <element signature="n#insert#0;n#mapper#0;n#!!top" />
-            <element signature="n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#select#0;n#mapper#0;n#!!top" />
-            <element signature="n#update#0;n#mapper#0;n#!!top" />
-            <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
-            <element signature="n#select#1;n#mapper#0;n#!!top" />
-            <element signature="n#select#2;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/EmployeeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="35" column="33" lean-forward="true" selection-start-line="34" selection-start-column="7" selection-end-line="35" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/SalaryDetailDao.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1240,20 +1172,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/SalaryDetailDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="24" column="49" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="49" />
+        <state relative-caret-position="351">
+          <caret line="21" column="26" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/service/DataParseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="32" column="33" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/SalaryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/EmployeeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/smart-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+          <folding>
+            <element signature="n#insert#0;n#mapper#0;n#!!top" />
+            <element signature="n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#select#0;n#mapper#0;n#!!top" />
+            <element signature="n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
+            <element signature="n#select#1;n#mapper#0;n#!!top" />
+            <element signature="n#select#2;n#mapper#0;n#!!top" />
+            <element signature="n#select#3;n#mapper#0;n#!!top" />
+            <element signature="n#select#4;n#mapper#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="79" column="8" lean-forward="true" selection-start-line="79" selection-start-column="8" selection-end-line="91" selection-end-column="34" />
+          <folding>
+            <element signature="method#insertEmployee#0;class#EmployeeDaoTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/QueryDataHandle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="51" column="10" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getSalaryDetailValidData#0;class#QueryDataHandle#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/QueryService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="51" column="42" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
+        <state relative-caret-position="27">
+          <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#377#378#0" expanded="true" />
@@ -1264,17 +1273,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/smart-context.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/test/dao/SalaryDetailDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="31" selection-end-column="27" />
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/dao/SalaryDetailDaoTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/SalaryDetailDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="41" column="42" lean-forward="true" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
+        <state relative-caret-position="244">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/service/QueryServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/SalaryDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret line="79" column="33" lean-forward="true" selection-start-line="79" selection-start-column="33" selection-end-line="79" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk-9.0.4/lib/src.zip!/java.base/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="1995" column="18" selection-start-line="1995" selection-start-column="18" selection-end-line="1995" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/DataParse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="97" column="19" selection-start-line="97" selection-start-column="19" selection-end-line="97" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

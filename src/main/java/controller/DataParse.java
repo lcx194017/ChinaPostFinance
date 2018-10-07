@@ -1,4 +1,4 @@
-package service;
+package controller;
 
 import domain.Employee;
 import domain.SalaryDetail;
@@ -15,6 +15,7 @@ import java.util.Map;
 /**
  * @author lcx :liu.changxin@qq.com
  * @data 2018/9/30 18:02
+ * 类功能：完成Excel数据的解析，解析后交给Service层录入数据库
  */
 public class DataParse {
     private static final int EXCEL_NOT_EXIST = -1;
@@ -72,6 +73,7 @@ public class DataParse {
 
                     for (int m = 0; m < col_numbers; m++) {
                         String cellData = (String) getCellFormatValue(row.getCell(m));
+                        cellData = symbolicNormalization(cellData);
                         if (Employee.contents.containsKey(col_names[m])) {
                             int index = Employee.contents.get(col_names[m]);
                             employee.setContents_value(index, cellData);
@@ -91,6 +93,15 @@ public class DataParse {
             }
         }
         return 0;
+    }
+
+    /**对数据中的符号进行规整化*/
+    private static String symbolicNormalization(String data) {
+        data = data.replace(',', '、');
+        data = data.replace('，', '、');
+        data = data.replace('/', '、');
+        data = data.replace('\\', '/');
+        return data;
     }
 
     private static Workbook readExcel(String filepath) {

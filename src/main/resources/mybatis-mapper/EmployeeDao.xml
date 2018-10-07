@@ -58,7 +58,7 @@
     </select>
 
     <select id="getEmployeeByLinkAndDateRange" resultMap="employeeMap">
-          SELECT * FROM employee WHERE production_link
+          SELECT * FROM     WHERE production_link
           LIKE concat(concat('%',#{param1}),'%') AND
           expiration_date BETWEEN #{param2} AND #{param3}
     </select>
