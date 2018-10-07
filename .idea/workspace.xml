@@ -9,7 +9,29 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/domain/SalaryDetail.java" line="396" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43515eba-a19e-4db3-934d-7beace7196ad" name="Default" comment="" />
+    <list default="true" id="43515eba-a19e-4db3-934d-7beace7196ad" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exception/RecordInvalidException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/QueryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/SalaryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/dao/SalaryDetailDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/EmployeeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/EmployeeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/SalaryDetailDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/SalaryDetailDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/QueryDataPro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/QueryDataPro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/SalaryDetailDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/SalaryDetailDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/smart-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/smart-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/EmployeeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/EmployeeDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/SalaryDetailDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/SalaryDetailDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-mapper/EmployeeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-mapper/EmployeeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-mapper/SalaryDetailDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-mapper/SalaryDetailDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/smart-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/smart-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/dao/EmployeeDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/dao/EmployeeDaoTest.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,54 +41,52 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="SalaryDetailDao.java" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/main/java/dao/SalaryDetailDao.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="486">
+                    <caret line="24" column="49" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="49" />
+                    <folding>
+                      <element signature="imports" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="EmployeeDao.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/main/java/dao/EmployeeDao.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="462">
+                    <caret line="35" column="33" lean-forward="true" selection-start-line="34" selection-start-column="7" selection-end-line="35" selection-end-column="33" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="EmployeeDao.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="18" column="18" selection-start-line="12" selection-start-column="4" selection-end-line="18" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="634">
-              <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="smart-servlet.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/smart-servlet.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SalaryDetailDao.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/SalaryDetailDao.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="76" column="39" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="39" />
+            <state relative-caret-position="582">
+              <caret line="81" column="38" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
               <folding>
                 <element signature="n#insert#0;n#mapper#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SalaryDetailDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/SalaryDetailDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="13" column="58" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="n#insert#1;n#mapper#0;n#!!top" />
+                <element signature="n#select#0;n#mapper#0;n#!!top" />
+                <element signature="n#update#0;n#mapper#0;n#!!top" />
+                <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
+                <element signature="n#select#1;n#mapper#0;n#!!top" />
+                <element signature="n#select#2;n#mapper#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -75,7 +95,7 @@
       <file leaf-file-name="DataParse.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/DataParse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3645">
+            <state relative-caret-position="363">
               <caret line="145" column="5" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -84,11 +104,38 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="SalaryService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/SalaryService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="40" column="32" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="40" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SalaryDetailDao.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/SalaryDetailDao.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="157" column="42" selection-start-line="157" selection-start-column="16" selection-end-line="157" selection-end-column="42" />
+              <folding>
+                <element signature="n#insert#0;n#mapper#0;n#!!top" />
+                <element signature="n#insert#1;n#mapper#0;n#!!top" />
+                <element signature="n#foreach#0;n#insert#1;n#mapper#0;n#!!top" />
+                <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="QueryDataPro.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/QueryDataPro.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="135" column="57" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="57" />
+            <state relative-caret-position="363">
+              <caret line="135" column="42" selection-start-line="135" selection-start-column="42" selection-end-line="135" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#getEmployeeValidData#0;class#QueryDataPro#0" />
@@ -98,11 +145,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="SalaryDetailDaoTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/test/dao/SalaryDetailDaoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3726">
-              <caret line="138" column="54" selection-start-line="138" selection-start-column="48" selection-end-line="138" selection-end-column="54" />
+            <state relative-caret-position="202">
+              <caret line="41" column="42" lean-forward="true" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QueryService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/QueryService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="337">
+              <caret line="51" column="42" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#377#378#0" expanded="true" />
+                <element signature="e#423#424#0" expanded="true" />
+                <element signature="e#494#495#0" expanded="true" />
+                <element signature="e#548#549#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/domain/Employee.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="28" column="24" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -110,19 +182,19 @@
       <file leaf-file-name="smart-context.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/smart-context.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+            <state relative-caret-position="120">
+              <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="31" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataParseTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/test/service/DataParseTest.java">
+      <file leaf-file-name="EmployeeDaoTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1269">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
+            <state relative-caret-position="339">
+              <caret line="93" selection-start-line="93" selection-end-line="93" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#insertEmployee#0;class#EmployeeDaoTest#0" />
               </folding>
             </state>
           </provider>
@@ -146,27 +218,37 @@
       <find>night_shiuft_fee</find>
       <find>night_shift_fee</find>
       <find>housing_usupplement</find>
+      <find>deleteSalaryRecordExist</find>
+      <find>getSalaryDetailExist</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/domain/Employee.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/smart-context.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/SalaryDetailDao" />
         <option value="$PROJECT_DIR$/src/main/java/service/DataParse.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/SalaryDetail.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/EmployeeDao.java" />
-        <option value="$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/SalaryDetailDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/SalaryDetailDao.java" />
         <option value="$PROJECT_DIR$/src/main/test/service/DataParseTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/QueryDataPro.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/smart-servlet.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/service/QueryDataPro.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/LaborSalaryService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/exception/RecordExistException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/EmployeeDao.java" />
+        <option value="$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/service/SalaryService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/SalaryDetailDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/SalaryDetailDao.java" />
+        <option value="$PROJECT_DIR$/src/main/test/dao/SalaryDetailDaoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/QueryService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/smart-context.xml" />
       </list>
     </option>
   </component>
@@ -202,11 +284,16 @@
     <option name="width" value="1456" />
     <option name="height" value="876" />
   </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -219,13 +306,94 @@
               <item name="ChinaPostFinance" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ChinaPostFinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChinaPostFinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChinaPostFinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChinaPostFinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChinaPostFinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChinaPostFinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChinaPostFinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChinaPostFinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChinaPostFinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChinaPostFinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChinaPostFinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChinaPostFinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChinaPostFinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChinaPostFinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChinaPostFinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChinaPostFinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis-mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChinaPostFinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChinaPostFinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChinaPostFinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChinaPostFinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChinaPostFinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChinaPostFinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -243,20 +411,20 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="service" />
       <recent name="dao" />
+      <recent name="service" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="service" />
       <recent name="domain" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\IdeaProjects\ChinaPostFinance\src\main\resources" />
       <recent name="G:\IdeaProjects\ChinaPostFinance\src\main\webapp\WEB-INF" />
       <recent name="G:\IdeaProjects\ChinaPostFinance\src\main\resources\mybatis-mapper" />
-      <recent name="G:\IdeaProjects\ChinaPostFinance\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -271,34 +439,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Running">
+  <component name="RunManager" selected="JUnit.SalaryDetailDaoTest.getSalaryDetailByIDAndDate">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="DataParseTest.phrase_inset" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ChinaPostFinance" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="service" />
-      <option name="MAIN_CLASS_NAME" value="service.DataParseTest" />
-      <option name="METHOD_NAME" value="phrase_inset" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="EmployeeDaoTest.insertEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmployeeDaoTest.getEmployeeByDynamicCondition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ChinaPostFinance" />
       <extension name="coverage">
         <pattern>
@@ -310,7 +455,99 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="dao" />
       <option name="MAIN_CLASS_NAME" value="dao.EmployeeDaoTest" />
-      <option name="METHOD_NAME" value="insertEmployee" />
+      <option name="METHOD_NAME" value="getEmployeeByDynamicCondition" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="EmployeeDaoTest.getEmployeeByLink" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ChinaPostFinance" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.EmployeeDaoTest" />
+      <option name="METHOD_NAME" value="getEmployeeByLink" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="EmployeeDaoTest.getEmployeeByLinkAndDateRange" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ChinaPostFinance" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.EmployeeDaoTest" />
+      <option name="METHOD_NAME" value="getEmployeeByLinkAndDateRange" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="SalaryDetailDaoTest.getSalaryByDateRange" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ChinaPostFinance" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.SalaryDetailDaoTest" />
+      <option name="METHOD_NAME" value="getSalaryByDateRange" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="SalaryDetailDaoTest.getSalaryDetailByIDAndDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ChinaPostFinance" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.SalaryDetailDaoTest" />
+      <option name="METHOD_NAME" value="getSalaryDetailByIDAndDate" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -432,13 +669,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.Running" />
-      <item itemvalue="JUnit.EmployeeDaoTest.insertEmployee" />
-      <item itemvalue="JUnit.DataParseTest.phrase_inset" />
+      <item itemvalue="JUnit.SalaryDetailDaoTest.getSalaryByDateRange" />
+      <item itemvalue="JUnit.EmployeeDaoTest.getEmployeeByLink" />
+      <item itemvalue="JUnit.EmployeeDaoTest.getEmployeeByLinkAndDateRange" />
+      <item itemvalue="JUnit.EmployeeDaoTest.getEmployeeByDynamicCondition" />
+      <item itemvalue="JUnit.SalaryDetailDaoTest.getSalaryDetailByIDAndDate" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DataParseTest.phrase_inset" />
-        <item itemvalue="JUnit.EmployeeDaoTest.insertEmployee" />
+        <item itemvalue="JUnit.SalaryDetailDaoTest.getSalaryDetailByIDAndDate" />
+        <item itemvalue="JUnit.EmployeeDaoTest.getEmployeeByDynamicCondition" />
+        <item itemvalue="JUnit.SalaryDetailDaoTest.getSalaryByDateRange" />
+        <item itemvalue="JUnit.EmployeeDaoTest.getEmployeeByLink" />
+        <item itemvalue="JUnit.EmployeeDaoTest.getEmployeeByLinkAndDateRange" />
       </list>
     </recent_temporary>
   </component>
@@ -457,43 +700,46 @@
       <workItem from="1538650295350" duration="644000" />
       <workItem from="1538652950033" duration="2484000" />
       <workItem from="1538746014972" duration="679000" />
+      <workItem from="1538785691405" duration="114000" />
+      <workItem from="1538789178052" duration="24601000" />
+      <workItem from="1538869322562" duration="2455000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="EmployeeDaoTest_insertEmployee - 2018.10.03 at 15h 54m 37s.xml">
-      <configuration name="EmployeeDaoTest.insertEmployee" configurationId="JUnit" />
+    <history-entry file="SalaryDetailDaoTest_getSalaryByDateRange - 2018.10.07 at 07h 45m 49s.xml">
+      <configuration name="SalaryDetailDaoTest.getSalaryByDateRange" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeDaoTest_insertEmployee - 2018.10.03 at 15h 55m 39s.xml">
-      <configuration name="EmployeeDaoTest.insertEmployee" configurationId="JUnit" />
+    <history-entry file="EmployeeDaoTest_getEmployeeByDynamicCondition - 2018.10.07 at 07h 46m 11s.xml">
+      <configuration name="EmployeeDaoTest.getEmployeeByDynamicCondition" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeDaoTest_insertEmployee - 2018.10.03 at 15h 57m 35s.xml">
-      <configuration name="EmployeeDaoTest.insertEmployee" configurationId="JUnit" />
+    <history-entry file="EmployeeDaoTest_getEmployeeByDynamicCondition - 2018.10.07 at 07h 51m 41s.xml">
+      <configuration name="EmployeeDaoTest.getEmployeeByDynamicCondition" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeDaoTest_insertEmployee - 2018.10.03 at 15h 59m 33s.xml">
-      <configuration name="EmployeeDaoTest.insertEmployee" configurationId="JUnit" />
+    <history-entry file="EmployeeDaoTest_getEmployeeByDynamicCondition - 2018.10.07 at 07h 51m 45s.xml">
+      <configuration name="EmployeeDaoTest.getEmployeeByDynamicCondition" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeDaoTest_insertEmployee - 2018.10.03 at 16h 04m 39s.xml">
-      <configuration name="EmployeeDaoTest.insertEmployee" configurationId="JUnit" />
+    <history-entry file="EmployeeDaoTest_getEmployeeByDynamicCondition - 2018.10.07 at 07h 54m 31s.xml">
+      <configuration name="EmployeeDaoTest.getEmployeeByDynamicCondition" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeDaoTest_insertEmployee - 2018.10.03 at 16h 06m 12s.xml">
-      <configuration name="EmployeeDaoTest.insertEmployee" configurationId="JUnit" />
+    <history-entry file="EmployeeDaoTest_getEmployeeByDynamicCondition - 2018.10.07 at 07h 56m 16s.xml">
+      <configuration name="EmployeeDaoTest.getEmployeeByDynamicCondition" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeDaoTest_insertEmployee - 2018.10.03 at 16h 08m 08s.xml">
-      <configuration name="EmployeeDaoTest.insertEmployee" configurationId="JUnit" />
+    <history-entry file="EmployeeDaoTest_getEmployeeByDynamicCondition - 2018.10.07 at 07h 56m 36s.xml">
+      <configuration name="EmployeeDaoTest.getEmployeeByDynamicCondition" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DataParseTest_phrase_inset - 2018.10.03 at 16h 15m 28s.xml">
-      <configuration name="DataParseTest.phrase_inset" configurationId="JUnit" />
+    <history-entry file="SalaryDetailDaoTest_getSalaryDetailByIDAndDate - 2018.10.07 at 08h 15m 33s.xml">
+      <configuration name="SalaryDetailDaoTest.getSalaryDetailByIDAndDate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DataParseTest_phrase_inset - 2018.10.03 at 16h 16m 05s.xml">
-      <configuration name="DataParseTest.phrase_inset" configurationId="JUnit" />
+    <history-entry file="SalaryDetailDaoTest_getSalaryDetailByIDAndDate - 2018.10.07 at 08h 15m 49s.xml">
+      <configuration name="SalaryDetailDaoTest.getSalaryDetailByIDAndDate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DataParseTest_phrase_inset - 2018.10.04 at 19h 40m 06s.xml">
-      <configuration name="DataParseTest.phrase_inset" configurationId="JUnit" />
+    <history-entry file="SalaryDetailDaoTest_getSalaryDetailByIDAndDate - 2018.10.07 at 08h 22m 55s.xml">
+      <configuration name="SalaryDetailDaoTest.getSalaryDetailByIDAndDate" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23654000" />
+    <option name="totallyTimeSpent" value="50824000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -510,21 +756,21 @@
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="11" weight="0.39972898" />
+      <window_info active="true" anchor="bottom" id="Debug" order="11" visible="true" weight="0.39891452" />
       <window_info anchor="bottom" id="TODO" order="14" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.3283582" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="1" />
       <window_info anchor="bottom" id="Java Enterprise" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="bottom" id="Version Control" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="6" />
       <window_info anchor="bottom" id="Run" order="9" weight="0.3292683" />
       <window_info anchor="bottom" id="Spring" order="1" />
       <window_info anchor="bottom" id="Terminal" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.26432666" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.27507162" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.3292683" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
       <window_info anchor="right" id="Commander" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="8" />
@@ -554,54 +800,35 @@
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java</url>
+          <line>65</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java</url>
+          <line>74</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java</url>
+          <line>93</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/test/dao/SalaryDetailDaoTest.java</url>
+          <line>43</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="9" />
+      <option name="time" value="16" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/QueryDataPro.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="135" column="57" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getEmployeeValidData#0;class#QueryDataPro#0" />
-            <element signature="method#getSalaryDetailValidData#0;class#QueryDataPro#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3726">
-          <caret line="138" column="54" selection-start-line="138" selection-start-column="48" selection-end-line="138" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/smart-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/service/DataParseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1269">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="22" column="40" selection-start-line="19" selection-start-column="4" selection-end-line="22" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
@@ -615,6 +842,9 @@
           <caret line="76" column="39" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="39" />
           <folding>
             <element signature="n#insert#0;n#mapper#0;n#!!top" />
+            <element signature="n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#foreach#0;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
           </folding>
         </state>
       </provider>
@@ -702,6 +932,9 @@
           <caret line="76" column="39" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="39" />
           <folding>
             <element signature="n#insert#0;n#mapper#0;n#!!top" />
+            <element signature="n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#foreach#0;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
           </folding>
         </state>
       </provider>
@@ -789,6 +1022,9 @@
           <caret line="76" column="39" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="39" />
           <folding>
             <element signature="n#insert#0;n#mapper#0;n#!!top" />
+            <element signature="n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#foreach#0;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
           </folding>
         </state>
       </provider>
@@ -864,189 +1100,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/SalaryDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="384" selection-start-line="384" selection-end-line="384" />
-          <folding>
-            <element signature="e#3443#3444#0" expanded="true" />
-            <element signature="e#3502#3503#0" expanded="true" />
-            <element signature="e#3553#3554#0" expanded="true" />
-            <element signature="e#3600#3601#0" expanded="true" />
-            <element signature="e#3643#3644#0" expanded="true" />
-            <element signature="e#3682#3683#0" expanded="true" />
-            <element signature="e#3731#3732#0" expanded="true" />
-            <element signature="e#3776#3777#0" expanded="true" />
-            <element signature="e#3824#3825#0" expanded="true" />
-            <element signature="e#3868#3869#0" expanded="true" />
-            <element signature="e#3907#3908#0" expanded="true" />
-            <element signature="e#3942#3943#0" expanded="true" />
-            <element signature="e#3985#3986#0" expanded="true" />
-            <element signature="e#4024#4025#0" expanded="true" />
-            <element signature="e#4072#4073#0" expanded="true" />
-            <element signature="e#4116#4117#0" expanded="true" />
-            <element signature="e#4160#4161#0" expanded="true" />
-            <element signature="e#4200#4201#0" expanded="true" />
-            <element signature="e#4253#4254#0" expanded="true" />
-            <element signature="e#4302#4303#0" expanded="true" />
-            <element signature="e#4337#4338#0" expanded="true" />
-            <element signature="e#4368#4369#0" expanded="true" />
-            <element signature="e#4414#4415#0" expanded="true" />
-            <element signature="e#4456#4457#0" expanded="true" />
-            <element signature="e#4502#4503#0" expanded="true" />
-            <element signature="e#4544#4545#0" expanded="true" />
-            <element signature="e#4583#4584#0" expanded="true" />
-            <element signature="e#4618#4619#0" expanded="true" />
-            <element signature="e#4662#4663#0" expanded="true" />
-            <element signature="e#4702#4703#0" expanded="true" />
-            <element signature="e#4755#4756#0" expanded="true" />
-            <element signature="e#4804#4805#0" expanded="true" />
-            <element signature="e#4845#4846#0" expanded="true" />
-            <element signature="e#4882#4883#0" expanded="true" />
-            <element signature="e#4921#4922#0" expanded="true" />
-            <element signature="e#4956#4957#0" expanded="true" />
-            <element signature="e#4997#4998#0" expanded="true" />
-            <element signature="e#5034#5035#0" expanded="true" />
-            <element signature="e#5081#5082#0" expanded="true" />
-            <element signature="e#5124#5125#0" expanded="true" />
-            <element signature="e#5170#5171#0" expanded="true" />
-            <element signature="e#5212#5213#0" expanded="true" />
-            <element signature="e#5258#5259#0" expanded="true" />
-            <element signature="e#5300#5301#0" expanded="true" />
-            <element signature="e#5349#5350#0" expanded="true" />
-            <element signature="e#5394#5395#0" expanded="true" />
-            <element signature="e#5434#5435#0" expanded="true" />
-            <element signature="e#5470#5471#0" expanded="true" />
-            <element signature="e#5502#5503#0" expanded="true" />
-            <element signature="e#5530#5531#0" expanded="true" />
-            <element signature="e#5567#5568#0" expanded="true" />
-            <element signature="e#5600#5601#0" expanded="true" />
-            <element signature="e#5666#5667#0" expanded="true" />
-            <element signature="e#5728#5729#0" expanded="true" />
-            <element signature="e#5794#5795#0" expanded="true" />
-            <element signature="e#5856#5857#0" expanded="true" />
-            <element signature="e#5900#5901#0" expanded="true" />
-            <element signature="e#5940#5941#0" expanded="true" />
-            <element signature="e#6002#6003#0" expanded="true" />
-            <element signature="e#6060#6061#0" expanded="true" />
-            <element signature="e#6117#6118#0" expanded="true" />
-            <element signature="e#6170#6171#0" expanded="true" />
-            <element signature="e#6207#6208#0" expanded="true" />
-            <element signature="e#6240#6241#0" expanded="true" />
-            <element signature="e#6438#6439#0" expanded="true" />
-            <element signature="e#6478#6479#0" expanded="true" />
-            <element signature="e#6548#6549#0" expanded="true" />
-            <element signature="e#6610#6611#0" expanded="true" />
-            <element signature="e#7026#7027#0" expanded="true" />
-            <element signature="e#7082#7083#0" expanded="true" />
-            <element signature="e#7422#7423#0" expanded="true" />
-            <element signature="e#7470#7471#0" expanded="true" />
-            <element signature="e#7534#7535#0" expanded="true" />
-            <element signature="e#7590#7591#0" expanded="true" />
-            <element signature="e#7796#7797#0" expanded="true" />
-            <element signature="e#7854#7855#0" expanded="true" />
-            <element signature="e#8062#8063#0" expanded="true" />
-            <element signature="e#8102#8103#0" expanded="true" />
-            <element signature="e#8172#8173#0" expanded="true" />
-            <element signature="e#8234#8235#0" expanded="true" />
-            <element signature="e#8304#8305#0" expanded="true" />
-            <element signature="e#8366#8367#0" expanded="true" />
-            <element signature="e#8422#8423#0" expanded="true" />
-            <element signature="e#8470#8471#0" expanded="true" />
-            <element signature="e#8536#8537#0" expanded="true" />
-            <element signature="e#8594#8595#0" expanded="true" />
-            <element signature="e#8814#8815#0" expanded="true" />
-            <element signature="e#8866#8867#0" expanded="true" />
-            <element signature="e#8922#8923#0" expanded="true" />
-            <element signature="e#8970#8971#0" expanded="true" />
-            <element signature="e#9030#9031#0" expanded="true" />
-            <element signature="e#9082#9083#0" expanded="true" />
-            <element signature="e#9288#9289#0" expanded="true" />
-            <element signature="e#9350#9351#0" expanded="true" />
-            <element signature="e#9420#9421#0" expanded="true" />
-            <element signature="e#9482#9483#0" expanded="true" />
-            <element signature="e#9684#9685#0" expanded="true" />
-            <element signature="e#9734#9735#0" expanded="true" />
-            <element signature="e#9776#9777#0" expanded="true" />
-            <element signature="e#9810#9811#0" expanded="true" />
-            <element signature="e#9862#9863#0" expanded="true" />
-            <element signature="e#9906#9907#0" expanded="true" />
-            <element signature="e#10396#10397#0" expanded="true" />
-            <element signature="e#10454#10455#0" expanded="true" />
-            <element signature="e#10878#10879#0" expanded="true" />
-            <element signature="e#10922#10923#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="31" column="33" selection-start-line="24" selection-start-column="3" selection-end-line="31" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/EmployeeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/smart-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
-          <caret line="9" column="66" selection-start-line="9" selection-start-column="66" selection-end-line="9" selection-end-column="66" />
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="52" column="42" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
+        <state relative-caret-position="634">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="18" column="18" selection-start-line="12" selection-start-column="4" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/SalaryDetailDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="76" column="39" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="39" />
-          <folding>
-            <element signature="n#insert#0;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/SalaryDetailDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="13" column="58" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="198">
+          <caret line="127" column="17" selection-start-line="127" selection-start-column="17" selection-end-line="127" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/test/service/DataParseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1269">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        <state relative-caret-position="864">
+          <caret line="32" column="33" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exception/RecordInvalidException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/SalaryDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="384" selection-start-line="384" selection-end-line="384" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
+          <folding>
+            <element signature="method#insertEmployee#0;class#EmployeeDaoTest#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/DataParse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3645">
+        <state relative-caret-position="363">
           <caret line="145" column="5" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1056,8 +1177,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/QueryDataPro.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="135" column="57" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="57" />
+        <state relative-caret-position="363">
+          <caret line="135" column="42" selection-start-line="135" selection-start-column="42" selection-end-line="135" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getEmployeeValidData#0;class#QueryDataPro#0" />
@@ -1066,31 +1187,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/smart-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/smart-servlet.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/SalaryService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
-          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+          <caret line="40" column="32" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="40" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3726">
-          <caret line="138" column="54" selection-start-line="138" selection-start-column="48" selection-end-line="138" selection-end-column="54" />
+        <state relative-caret-position="363">
+          <caret line="28" column="24" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        <state relative-caret-position="582">
+          <caret line="81" column="38" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
+          <folding>
+            <element signature="n#insert#0;n#mapper#0;n#!!top" />
+            <element signature="n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#select#0;n#mapper#0;n#!!top" />
+            <element signature="n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
+            <element signature="n#select#1;n#mapper#0;n#!!top" />
+            <element signature="n#select#2;n#mapper#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/EmployeeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="35" column="33" lean-forward="true" selection-start-line="34" selection-start-column="7" selection-end-line="35" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/SalaryDetailDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="157" column="42" selection-start-line="157" selection-start-column="16" selection-end-line="157" selection-end-column="42" />
+          <folding>
+            <element signature="n#insert#0;n#mapper#0;n#!!top" />
+            <element signature="n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#foreach#0;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/SalaryDetailDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="24" column="49" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/QueryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="51" column="42" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
+            <element signature="e#423#424#0" expanded="true" />
+            <element signature="e#494#495#0" expanded="true" />
+            <element signature="e#548#549#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/smart-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="31" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/dao/SalaryDetailDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="41" column="42" lean-forward="true" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
         </state>
       </provider>
     </entry>

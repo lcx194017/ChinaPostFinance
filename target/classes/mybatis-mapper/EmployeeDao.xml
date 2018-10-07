@@ -14,9 +14,74 @@
         INSERT INTO
         employee(`id`, `name`, `level`, `department`, `group`, `post`, `production_link`, `expiration_date`)
         VALUES
-        <foreach collection="list" item="employee" index= "index" separator =",">
-            (#{employee.id}, #{employee.name}, #{employee.level}, #{employee.department}, #{employee.group}, #{employee.post}, #{employee.production_link}, #{employee.expiration_date})
+        <foreach collection="list" item="employee" index="index" separator=",">
+            (#{employee.id}, #{employee.name}, #{employee.level}, #{employee.department}, #{employee.group},
+            #{employee.post}, #{employee.production_link}, #{employee.expiration_date})
         </foreach>
     </insert>
+
+    <select id="employeeIsExist" parameterType="Employee" resultType="int">
+        SELECT COUNT(*) FROM employee WHERE
+        id = #{id} AND expiration_date = #{expiration_date}
+    </select>
+
+    <update id="updateEmployee" parameterType="Employee">
+        UPDATE employee SET
+        `name` = #{name},
+        `level` = #{level},
+        `department` = #{department},
+        `group` = #{group},
+        `post` = #{post},
+        `production_link` = #{production_link}
+        WHERE id = #{id} AND expiration_date = #{expiration_date}
+    </update>
+
+    <resultMap id="employeeMap" type="Employee">
+        <id property="id" column="id"></id>
+        <result property="name" column="name"></result>
+        <result property="level" column="level"></result>
+        <result property="department" column="department"></result>
+        <result property="group" column="group"></result>
+        <result property="post" column="post"></result>
+        <result property="production_link" column="production_link"></result>
+        <result property="expiration_date" column="expiration_date"></result>
+    </resultMap>
+
+    <select id="getEmployeeByDateRange" resultMap="employeeMap">
+        SELECT * FROM employee WHERE expiration_date
+        BETWEEN #{param1} AND #{param2}
+    </select>
+
+    <select id="getEmployeeByLink" resultMap="employeeMap" parameterType="String">
+          SELECT * FROM employee WHERE production_link
+          LIKE concat(concat('%',#{link}),'%')
+    </select>
+
+    <select id="getEmployeeByLinkAndDateRange" resultMap="employeeMap">
+          SELECT * FROM employee WHERE production_link
+          LIKE concat(concat('%',#{param1}),'%') AND
+          expiration_date BETWEEN #{param2} AND #{param3}
+    </select>
+
+    <select id="getEmployeeByDynamicCondition" resultMap="employeeMap" parameterType="hashmap">
+        SELECT * FROM employee
+        <where>
+            <if test="department != null">
+                `department` IN
+                <foreach item="item" index="index" collection="department" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="group != null">
+                AND `group` IN
+                <foreach item="item" index="index" collection="group" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="startTime != null and endTime != null">
+                AND  `expiration_date` BETWEEN #{startTime} AND #{endTime}
+            </if>
+        </where>
+    </select>
 
 </mapper>

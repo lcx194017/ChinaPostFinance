@@ -149,4 +149,102 @@
           #{salaryDetail.labor_cost})
         </foreach>
     </insert>
+
+    <select id="getSalaryDetailExist" resultType="int" parameterType="SalaryDetail">
+        SELECT COUNT(*) FROM  salary_detail WHERE
+        `id` = #{id} AND `pay_date` = #{pay_date}
+    </select>
+
+    <select id="getSalaryDetailByIDAndDate" resultMap="salaryDetailResultMap">
+        SELECT * FROM  salary_detail
+        WHERE `id` = #{param1}
+        AND `pay_date` = #{param2}
+    </select>
+
+    <update id="updateSalaryDetail" parameterType="SalaryDetail">
+        UPDATE salary_detail SET
+        `base_pay` = #{base_pay},
+        `monthly_performance` = #{monthly_performance},
+        `professional_qualification_allowance` = #{professional_qualification_allowance},
+        `technical_post_allowance` = #{technical_post_allowance},
+        `expert_allowance` = #{expert_allowance},
+        `class_leader_allowance` = #{class_leader_allowance},
+        `comprehensive_subsidy` = #{comprehensive_subsidy},
+        `overtime_pay` = #{overtime_pay},
+        `night_shift_fee` = #{night_shift_fee},
+        `communication_subsidy` = #{communication_subsidy},
+        `traffic_allowance` = #{traffic_allowance},
+        `vehicle_kilometres_subsidy` = #{vehicle_kilometres_subsidy},
+        `meal_fee` = #{meal_fee},
+        `housing_supplement` = #{housing_supplement},
+        `recharge_supplement` = #{recharge_supplement},
+        `festival_fee` = #{festival_fee},
+        `labor_competition` = #{labor_competition},
+        `business_development_award` = #{business_development_award},
+        `quality_reward` = #{quality_reward},
+        `season_award` = #{season_award},
+        `central_reward` = #{central_reward},
+        `high_temperature_fee` = #{high_temperature_fee},
+        `steady_post_subsidy` = #{steady_post_subsidy},
+        `performance_cashing` = #{performance_cashing},
+        `staff_training_expense` = #{staff_training_expense},
+        `welfare_funds` = #{welfare_funds},
+        `other` = #{other},
+        `joint_plan` = #{joint_plan},
+        `enterprises_undertake_housing_provident` = #{enterprises_undertake_housing_provident},
+        `enterprises_undertake_various_insurance` = #{enterprises_undertake_various_insurance},
+        `trade_union_funds` = #{trade_union_funds},
+        `outsourced_personnel_management_fee` = #{outsourced_personnel_management_fee},
+        `outsourced_personnel_taxes_fee` = #{outsourced_personnel_taxes_fee},
+        `labor_cost` = #{labor_cost}
+        WHERE id = #{id} AND `pay_date` = #{pay_date}
+    </update>
+
+    <delete id="deleteSalaryRecordExist" parameterType="Date">
+        DELETE FROM salary_detail WHERE `pay_date` = #{date}
+    </delete>
+
+    <resultMap id="salaryDetailResultMap" type="SalaryDetail">
+        <id property="id" column="id"></id>
+        <result property="pay_date" column="pay_date"></result>
+        <result property="base_pay" column="base_pay"></result>
+        <result property="monthly_performance" column="monthly_performance"></result>
+        <result property="professional_qualification_allowance" column="professional_qualification_allowance"></result>
+        <result property="technical_post_allowance" column="technical_post_allowance"></result>
+        <result property="expert_allowance" column="expert_allowance"></result>
+        <result property="class_leader_allowance" column="class_leader_allowance"></result>
+        <result property="comprehensive_subsidy" column="comprehensive_subsidy"></result>
+        <result property="overtime_pay" column="overtime_pay"></result>
+        <result property="night_shift_fee" column="night_shift_fee"></result>
+        <result property="communication_subsidy" column="communication_subsidy"></result>
+        <result property="traffic_allowance" column="traffic_allowance"></result>
+        <result property="vehicle_kilometres_subsidy" column="vehicle_kilometres_subsidy"></result>
+        <result property="meal_fee" column="meal_fee"></result>
+        <result property="housing_supplement" column="housing_supplement"></result>
+        <result property="recharge_supplement" column="recharge_supplement"></result>
+        <result property="festival_fee" column="festival_fee"></result>
+        <result property="labor_competition" column="labor_competition"></result>
+        <result property="business_development_award" column="business_development_award"></result>
+        <result property="quality_reward" column="quality_reward"></result>
+        <result property="season_award" column="season_award"></result>
+        <result property="central_reward" column="central_reward"></result>
+        <result property="high_temperature_fee" column="high_temperature_fee"></result>
+        <result property="steady_post_subsidy" column="steady_post_subsidy"></result>
+        <result property="performance_cashing" column="performance_cashing"></result>
+        <result property="staff_training_expense" column="staff_training_expense"></result>
+        <result property="welfare_funds" column="welfare_funds"></result>
+        <result property="other" column="other"></result>
+        <result property="joint_plan" column="joint_plan"></result>
+        <result property="enterprises_undertake_housing_provident" column="enterprises_undertake_housing_provident"></result>
+        <result property="enterprises_undertake_various_insurance" column="enterprises_undertake_various_insurance"></result>
+        <result property="trade_union_funds" column="trade_union_funds"></result>
+        <result property="outsourced_personnel_management_fee" column="outsourced_personnel_management_fee"></result>
+        <result property="outsourced_personnel_taxes_fee" column="outsourced_personnel_taxes_fee"></result>
+        <result property="labor_cost" column="labor_cost"></result>
+    </resultMap>
+
+    <select id="getSalaryByDateRange" resultMap="salaryDetailResultMap">
+        SELECT * FROM  salary_detail WHERE `pay_date` BETWEEN #{param1} AND #{param2}
+    </select>
+
 </mapper>

@@ -133,5 +133,5 @@ public class QueryDataPro {
 
     /**功能说明：根据mark将Employee的list数据集合剔除共同无用项，转化为Json格式*/
 
-    /**功能说明：根据mark将SalaryDetail的list数据集合剔除共同无用项，转化为Json格式*/
+    /**功能说明：根据mark将SalaryDetail的list数据    */
 }
