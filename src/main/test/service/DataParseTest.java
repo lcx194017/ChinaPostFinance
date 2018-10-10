@@ -32,7 +32,9 @@ public class DataParseTest {
     public void phrase_inset() {
         Map<String, Employee> employeeMap = new HashMap<String, Employee>();
         Map<String, SalaryDetail> salaryDetailMap = new HashMap<String, SalaryDetail>();
-        String file_path = "H:\\工程项目\\南京集散中心损益结算\\第一期\\空侧_生产环节sy.xlsx";
+        //String file_path = "H:\\工程项目\\南京集散中心损益结算\\第一期\\空侧_生产环节sy.xlsx";
+        //String file_path = "H:\\工程项目\\南京集散中心损益结算\\第一期\\陆侧人工_生产环节sy.xlsx";
+        String file_path = "H:\\工程项目\\南京集散中心损益结算\\第一期\\扁平件人工_生产环节sy.xls";
         int res = DataParse.ReadExcelData(file_path, employeeMap, salaryDetailMap);
         assertEquals(res, 0);
         Set<String> keySet = employeeMap.keySet();

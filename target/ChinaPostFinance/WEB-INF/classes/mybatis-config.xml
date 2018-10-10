@@ -8,5 +8,6 @@
     <typeAliases>
         <typeAlias  alias="Employee" type="domain.Employee"></typeAlias>
         <typeAlias  alias="SalaryDetail" type="domain.SalaryDetail"></typeAlias>
+        <typeAlias  alias="UploadRecord" type="domain.UploadRecord"></typeAlias>
     </typeAliases>
 </configuration>

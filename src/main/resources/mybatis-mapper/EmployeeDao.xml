@@ -52,6 +52,10 @@
         BETWEEN #{param1} AND #{param2}
     </select>
 
+    <select id="getEmployeeByName" resultMap="employeeMap" parameterType="String">
+          SELECT * FROM employee WHERE `name` = #{name}
+    </select>
+
     <select id="getEmployeeByLink" resultMap="employeeMap" parameterType="String">
           SELECT * FROM employee WHERE production_link
           LIKE concat(concat('%',#{link}),'%')
@@ -77,6 +81,22 @@
                 <foreach item="item" index="index" collection="group" open="(" separator="," close=")">
                     #{item}
                 </foreach>
+            </if>
+            <if test="startTime != null and endTime != null">
+                AND  `expiration_date` BETWEEN #{startTime} AND #{endTime}
+            </if>
+        </where>
+    </select>
+
+    <select id="getProductionLinkByDynamicCondition" resultMap="employeeMap" parameterType="hashmap">
+        SELECT * FROM employee
+        <where>
+            <if test="production_link != null">
+                (
+                <foreach item="item" index="index" collection="production_link" open="(" separator="OR" close=")">
+                    `production_link` LIKE concat(concat('%',#{item}),'%')
+                </foreach>
+                )
             </if>
             <if test="startTime != null and endTime != null">
                 AND  `expiration_date` BETWEEN #{startTime} AND #{endTime}

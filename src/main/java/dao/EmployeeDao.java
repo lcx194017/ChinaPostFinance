@@ -25,6 +25,9 @@ public interface EmployeeDao {
     /**通过日期范围获取指定时间段的员工信息*/
     List<Employee> getEmployeeByDateRange(Date date1, Date date2);
 
+    /**根据员工姓名进行查询*/
+    List<Employee> getEmployeeByName(String name);
+
     /**通过生产环节获取员工信息*/
     List<Employee> getEmployeeByLink(String link);
 
@@ -36,4 +39,9 @@ public interface EmployeeDao {
      * department, group 的类型是list
      * */
     List<Employee> getEmployeeByDynamicCondition(HashMap<String, Object> params);
+
+    /**动态查询，根据时间段、生产环节查询数据，查询到的数据用于环节成本分摊
+     * params:可能但不完全包括 startTime, endTime , 生产环节描述*/
+    List<Employee> getProductionLinkByDynamicCondition(HashMap<String, Object> params);
+
 }

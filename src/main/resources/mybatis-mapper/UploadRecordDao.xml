@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.UploadRecordDao">
+
+    <insert id="insertUploadRecord" parameterType="UploadRecord">
+      INSERT INTO
+      file_upload_record(`file_name`, `file_type`, `storage_path`, `upload_date`, `upload_ip`, `operator`, `desc`)
+      VALUES
+      (#{file_name}, #{file_type}, #{storage_path}, #{upload_date}, #{upload_ip}, #{operator}, #{desc})
+    </insert>
+
+    <resultMap id="uploadRecordMap" type="UploadRecord">
+        <id property="id" column="id"></id>
+        <result property="file_name" column="file_name"></result>
+        <result property="file_type" column="file_type"></result>
+        <result property="storage_path" column="storage_path"></result>
+        <result property="upload_date" column="upload_date"></result>
+        <result property="upload_ip" column="upload_ip"></result>
+        <result property="operator" column="operator"></result>
+        <result property="desc" column="desc"></result>
+    </resultMap>
+
+    <select id="getAllUploadRecords" resultType="map">
+        SELECT * from  file_upload_record
+    </select>
+
+    <select id="queryFileExist" resultType="int" parameterType="string">
+         SELECT COUNT(*) from file_upload_record where `storage_path` = #{storage_path}
+    </select>
+
+</mapper>

@@ -451,5 +451,11 @@ public class SalaryDetail {
             outsourced_personnel_taxes_fee = Double.parseDouble(contents_value[33]);
         if (contents_value[34] != null)
             labor_cost = Double.parseDouble(contents_value[34]);
+
+        //没有计算人工成本的在这里统计
+        if (labor_cost == 0)
+            labor_cost = joint_plan + enterprises_undertake_housing_provident + enterprises_undertake_various_insurance
+                    + trade_union_funds + outsourced_personnel_management_fee + outsourced_personnel_taxes_fee;
+
     }
 }

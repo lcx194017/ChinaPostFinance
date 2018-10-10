@@ -93,4 +93,21 @@ public class EmployeeDaoTest {
         List<Employee> list = employeeDao.getEmployeeByDynamicCondition(params);
         System.out.println(list.size());
     }
+
+    @Test
+    public void getProductionLinkByDynamicCondition() {
+        Date startTime = new Date(2018 - 1900, 9,1);
+        Date endTime = new Date(2018 - 1900, 9,1);
+        List<String> production_link = new LinkedList<>();
+        production_link.add("邮件过检");
+        production_link.add("邮件装车发运");
+
+        HashMap<String, Object> params = new HashMap<>();
+        params.put("startTime", startTime);
+        params.put("endTime", endTime);
+        params.put("production_link",production_link);
+
+        List<Employee> list = employeeDao.getProductionLinkByDynamicCondition(params);
+        System.out.println(list.size());
+    }
 }
