@@ -17,5 +17,5 @@ public interface UploadRecordDao {
     List<UploadRecord> getAllUploadRecords();
 
     /**查看某个文件是否已经存在*/
-    int queryFileExist(String storage_path);
+    int queryFileExist(String file_name, String file_type);
 }

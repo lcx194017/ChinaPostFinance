@@ -45,7 +45,7 @@ public class ManualControl {
             map = queryService.operationAreaDynamicQuery(null);
         } catch (RecordInvalidException e) {
             e.printStackTrace();
-            result = "{\"error\": -102}";
+            result = "{\"error\": -101}";
         }
         if (map != null) {
             List<Employee> employeeList = (List<Employee>) map.get("employeeList");
@@ -89,6 +89,41 @@ public class ManualControl {
         }
 
         response.setContentType("text/html;charset=UTF-8");
+        System.out.println(result);
+        //设置跨域请求
+        response.setHeader("Access-Control-Allow-Origin", "*");
+
+        try {
+            response.getWriter().println(result);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * @Description: 根据姓名查询信息
+     * @Param: [name, response]
+     * @return: void
+     * @Author: lcx
+     * @Date: 2018/10/11
+     */
+    @RequestMapping(value = "/department_three/base/get_base_name_data", method = RequestMethod.POST)
+    public void departmentThree_getBaseNameData(@RequestParam("name") String name,
+                                                HttpServletResponse response) {
+        Map<String, Object> map = null;
+        String result = null;
+        try {
+            map = queryService.operationAreaPersonQuery(name);
+        } catch (RecordInvalidException e) {
+            e.printStackTrace();
+            result = "{\"error\": -103}";
+        }
+        if (map != null) {
+            List<Employee> employeeList = (List<Employee>) map.get("employeeList");
+            List<SalaryDetail> salaryDetailList = (List<SalaryDetail>) map.get("salaryDetailList");
+            result = queryDataHandleService.generateOperationAreaJsonData(employeeList, salaryDetailList);
+        }
+        response.setContentType("text/html;charset=UTF-8");
         //设置跨域请求
         response.setHeader("Access-Control-Allow-Origin", "*");
 
@@ -119,7 +154,7 @@ public class ManualControl {
         if (map != null) {
             List<Employee> employeeList = (List<Employee>) map.get("employeeList");
             List<SalaryDetail> salaryDetailList = (List<SalaryDetail>) map.get("salaryDetailList");
-            result = queryDataHandleService.generateOperationLinkJsonData(employeeList, salaryDetailList, link);
+            result = queryDataHandleService.generateOperationLinkJsonData(employeeList, salaryDetailList, link, link, link);
         }
         response.setContentType("text/html;charset=UTF-8");
         //设置跨域请求
@@ -134,9 +169,9 @@ public class ManualControl {
 
     @RequestMapping(value = "/department_three/detail", method = RequestMethod.POST)
     public void departmentThree_detail(@RequestParam("startTime") String startTime,
-                                     @RequestParam("endTime") String endTime,
-                                     @RequestParam("link") List<String> link,
-                                     HttpServletResponse response) {
+                                       @RequestParam("endTime") String endTime,
+                                       @RequestParam("link") List<String> link,
+                                       HttpServletResponse response) {
         HashMap<String, Object> params = new HashMap<>();
         //输入String日期转换成Date格式
         dateTransform(params, startTime, endTime);
@@ -153,7 +188,7 @@ public class ManualControl {
             List<Employee> employeeList = (List<Employee>) map.get("employeeList");
             List<SalaryDetail> salaryDetailList = (List<SalaryDetail>) map.get("salaryDetailList");
             result = queryDataHandleService.generateOperationLinkDetailJsonData(employeeList,
-                    salaryDetailList, link.get(0));
+                    salaryDetailList);
         }
         response.setContentType("text/html;charset=UTF-8");
         //设置跨域请求
@@ -164,6 +199,13 @@ public class ManualControl {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+
+    /**测试匹配id*/
+    @RequestMapping(value = "/test/{id}", method = RequestMethod.GET)
+    public void test() {
+        System.out.println("test success!");
     }
 
     private static void dateTransform(Map<String, Object> map, String startTime, String endTime) {

@@ -69,15 +69,22 @@ public class QueryServiceTest {
     public void productionLinkDynamicQuery() {
         Date startTime = new Date(2018 - 1900, 9,1);
         Date endTime = new Date(2018 - 1900, 9,1);
-        List<String> production_link = new LinkedList<>();
-        production_link.add("综合");
-        production_link.add("运保");
-        production_link.add("白班");
+        List<String> air = new LinkedList<>();
+        air.add("运保");
+        air.add("空侧封发装箱称重");
+
+        List<String> flat = new LinkedList<>();
+        flat.add("塑封操作");
+
+        List<String> ground = new LinkedList<>();
+        ground.add("人工处理");
 
         HashMap<String, Object> params = new HashMap<>();
         params.put("startTime", startTime);
         params.put("endTime", endTime);
-        params.put("production_link",production_link);
+        params.put("air",air);
+        params.put("flat",flat);
+        params.put("ground",ground);
 
         Map<String, Object> map = null;
         try {
@@ -90,7 +97,7 @@ public class QueryServiceTest {
             List<SalaryDetail> salaryDetailList = (List<SalaryDetail>) map.get("salaryDetailList");
 
 
-            String result = queryDataHandleService.generateOperationLinkJsonData(employeeList, salaryDetailList, production_link);
+            String result = queryDataHandleService.generateOperationLinkJsonData(employeeList, salaryDetailList, flat, air, ground);
             File file = new File("G:/Production_link.json");
             try {
                 BufferedWriter writer = new BufferedWriter(new FileWriter(file));
@@ -112,7 +119,7 @@ public class QueryServiceTest {
         HashMap<String, Object> params = new HashMap<>();
         params.put("startTime", startTime);
         params.put("endTime", endTime);
-        params.put("production_link",production_link);
+        params.put("air",production_link);      //测试空侧的生产环节
 
         Map<String, Object> map = null;
         try {
@@ -125,7 +132,7 @@ public class QueryServiceTest {
             List<SalaryDetail> salaryDetailList = (List<SalaryDetail>) map.get("salaryDetailList");
 
 
-            String result = queryDataHandleService.generateOperationLinkDetailJsonData(employeeList, salaryDetailList, ((LinkedList<String>) production_link).getFirst());
+            String result = queryDataHandleService.generateOperationLinkDetailJsonData(employeeList, salaryDetailList);
             File file = new File("G:/LinkDetail.json");
             try {
                 BufferedWriter writer = new BufferedWriter(new FileWriter(file));

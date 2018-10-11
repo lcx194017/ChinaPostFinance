@@ -33,14 +33,40 @@ public class QueryService {
     }
 
     /**
-     *
+     * @Description: 判断某个部门某个月的数据是否已经入库
+     * @Param: [department, date]
+     * @return: int
+     * @Author: lcx
+     * @Date: 2018/10/10
      */
+    @Transactional(readOnly = true)
+    public int departmentAtDateExist(String department, Date date) {
+        return employeeDao.depAndDateIsExist(department, date);
+    }
+
+    /**
+     * @Description: 查询特定员工的所有数据
+     * @Param: [name] 
+     * @return: java.util.Map<java.lang.String,java.lang.Object> 
+     * @Author: lcx
+     * @Date: 2018/10/10 
+     */ 
+    @Transactional(readOnly = true)
+    public Map<String, Object> operationAreaPersonQuery(String name) throws RecordInvalidException{
+        List<Employee> employeeList = employeeDao.getEmployeeByName(name);
+        List<SalaryDetail> salaryDetailList = getSalaryDetailByEmployee(employeeList);
+        Map<String, Object> resultMap = new HashMap<>();
+        resultMap.put("employeeList", employeeList);
+        resultMap.put("salaryDetailList", salaryDetailList);
+        return resultMap;
+    }
+    
     /**
      * @Description: 依据前端选择条件，动态查询，params为HashMap结构 params:可能但不完全包括
      * startTime, endTime, department, group  department, group 的类型是list 把查询结果放进Map
      * 中作为返回值，做下一步的处理
      * @Param: [params]
-     * @return: java.util.Map<java.lang.String,java.lang.Object>
+     * @return: java.util.Map<java.lang.String , java.lang.Object>
      * @Author: lcx
      * @Date: 2018/10/8
      */
@@ -57,10 +83,10 @@ public class QueryService {
 
     /**
      * @Description: 依据前端选择条件，对生产环节统计需要的数据进行动态查询,params为HashMap结构
-     * params:可能但不完全包括 startTime, endTime, production_link, 其中 production_link 的类型是
-     * list，然后把查询结果放进Map中作为返回值，做下一步的处理
+     * params:可能但不完全包括 startTime, endTime, flat, air, ground
+     * 其中 flat, air, ground 的类型是list，然后把查询结果放进Map中作为返回值，做下一步的处理
      * @Param: [params]
-     * @return: java.util.Map<java.lang.String   ,   java.lang.Object>
+     * @return: java.util.Map<java.lang.String       ,       java.lang.Object>
      * @Author: lcx
      * @Date: 2018/10/8
      */

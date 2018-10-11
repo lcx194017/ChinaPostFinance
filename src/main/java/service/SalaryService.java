@@ -9,8 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author lcx :liu.changxin@qq.com
@@ -39,12 +38,14 @@ public class SalaryService {
      */
     @Transactional
     public void insertSalaryData(Map<String, Employee> employeeMap,
-                                 Map<String, SalaryDetail> salaryDetailMap)
+                                 Map<String, SalaryDetail> salaryDetailMap, Date date)
             throws RecordInvalidException {
         Set<String> employeeKeys = employeeMap.keySet();
         for (String key : employeeKeys) {
             Employee employee = employeeMap.get(key);
+            employee.setExpiration_date(date);
             SalaryDetail salaryDetail = salaryDetailMap.get(key);
+            salaryDetail.setPay_date(date);
             if (employee == null && salaryDetail == null)
                 continue;
 
@@ -63,5 +64,51 @@ public class SalaryService {
             else
                 salaryDetailDao.updateSalaryDetail(salaryDetail);
         }
+    }
+
+    /**
+     * @Description: 如果数据库中没有对应记录，批量插入，如果有则调用 insertSalaryData逐条更新或插入
+     * @Param: [employeeMap, salaryDetailMap]
+     * @return: int
+     * @Author: lcx
+     * @Date: 2018/10/11
+     */
+    @Transactional
+    public int insertOrUpdateDate(Map<String, Employee> employeeMap,
+                                  Map<String, SalaryDetail> salaryDetailMap, Date date)
+            throws RecordInvalidException {
+        if (employeeMap.size() == 0 || salaryDetailMap.size() == 0)
+            return -1;
+
+        if (employeeMap.size() != salaryDetailMap.size())
+            throw new RecordInvalidException("数据信息不对等");
+
+        Employee employee = employeeMap.get(0);
+        String department = employee.getDepartment();
+
+        //通过employee表就可以知道该部门本月的数据是不是已经录入
+        int count = employeeDao.depAndDateIsExist(department, date);
+        if (count == 0) {   //该部门本月数据没有录入，可以批量插入
+            Set<String> keySet = employeeMap.keySet();
+            List<Employee> emp_list = new LinkedList<>();
+            for (String key : keySet) {
+                Employee emp= employeeMap.get(key);
+                employee.setExpiration_date(date);
+                emp_list.add(emp);
+            }
+            employeeDao.insertEmployeeBatch(emp_list);
+
+            keySet = salaryDetailMap.keySet();
+            List<SalaryDetail>sal_list = new LinkedList<>();
+            for (String key : keySet) {
+                SalaryDetail salaryDetail = salaryDetailMap.get(key);
+                salaryDetail.setPay_date(date);
+                sal_list.add(salaryDetail);
+            }
+            salaryDetailDao.insertSalaryDetailBatch(sal_list);
+        } else {
+            insertSalaryData(employeeMap, salaryDetailMap, date);
+        }
+        return 0;
     }
 }

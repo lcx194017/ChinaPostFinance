@@ -26,8 +26,9 @@
         SELECT * from  file_upload_record
     </select>
 
-    <select id="queryFileExist" resultType="int" parameterType="string">
-         SELECT COUNT(*) from file_upload_record where `storage_path` = #{storage_path}
+    <select id="queryFileExist" resultType="int">
+         SELECT COUNT(*) from file_upload_record where
+         `file_name` = #{param1} AND `file_type` = #{param2}
     </select>
 
 </mapper>

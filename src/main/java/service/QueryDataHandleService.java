@@ -470,7 +470,8 @@ public class QueryDataHandleService {
         }
 
         /**JSON数组数据尾部*/
-        json_data.deleteCharAt(json_data.length() - 1);
+        if (length != 0)
+            json_data.deleteCharAt(json_data.length() - 1);
         json_data.append("],");
 
         //统计总计的Json数据
@@ -507,17 +508,32 @@ public class QueryDataHandleService {
      */
     public String generateOperationLinkJsonData(List<Employee> employeeList,
                                                 List<SalaryDetail> salaryDetailList,
-                                                List<String> production_link_list) {
+                                                List<String> flat,
+                                                List<String> air,
+                                                List<String> ground) {
         if (employeeList == null || salaryDetailList == null)
             return "";
         if (employeeList.size() != salaryDetailList.size())
             return "";
 
         HashMap<String, LinkCostStatistics> linkCostStatisticsHashMap = new HashMap<>();
-        for (String link : production_link_list) {
+        for (String link : flat) {
             LinkCostStatistics linkCostStatistics = new LinkCostStatistics();
+            linkCostStatistics.setDepartment("扁平件邮件作业区");
             linkCostStatistics.setProduction_link(link);
-            linkCostStatisticsHashMap.put(link, linkCostStatistics);
+            linkCostStatisticsHashMap.put("扁平件邮件作业区" + link, linkCostStatistics);
+        }
+        for (String link : air) {
+            LinkCostStatistics linkCostStatistics = new LinkCostStatistics();
+            linkCostStatistics.setDepartment("空侧邮件作业区");
+            linkCostStatistics.setProduction_link(link);
+            linkCostStatisticsHashMap.put("空侧邮件作业区" + link, linkCostStatistics);
+        }
+        for (String link : ground) {
+            LinkCostStatistics linkCostStatistics = new LinkCostStatistics();
+            linkCostStatistics.setDepartment("陆侧邮件作业区");
+            linkCostStatistics.setProduction_link(link);
+            linkCostStatisticsHashMap.put("陆侧邮件作业区" + link, linkCostStatistics);
         }
 
         //对查询的每条数据进行人工成本分摊
@@ -530,20 +546,41 @@ public class QueryDataHandleService {
             int links_count = production_link.split("、").length;  //单个员工涉及的环节数
             double labor_cost = salaryDetail.getLabor_cost();              //单个员工的人工成本
 
-            for (String link : production_link_list) {
-                if (production_link.contains(link)) {
-                    LinkCostStatistics linkCostStatistics = linkCostStatisticsHashMap.get(link);
-                    linkCostStatistics.setDepartment(department);
-                    linkCostStatistics.setCount(linkCostStatistics.getCount() + 1);
-                    linkCostStatistics.setTotal_cost(linkCostStatistics.getTotal_cost() + labor_cost / links_count);
+            if (department.equals("扁平件邮件作业区"))
+                for (String link : flat) {
+                    if (production_link.contains(link)) {
+                        LinkCostStatistics linkCostStatistics = linkCostStatisticsHashMap.get("扁平件邮件作业区" + link);
+                        linkCostStatistics.setDepartment(department);
+                        linkCostStatistics.setCount(linkCostStatistics.getCount() + 1);
+                        linkCostStatistics.setTotal_cost(linkCostStatistics.getTotal_cost() + labor_cost / links_count);
+                    }
                 }
-            }
+            else if (department.equals("空侧邮件作业区"))
+                for (String link : air) {
+                    if (production_link.contains(link)) {
+                        LinkCostStatistics linkCostStatistics = linkCostStatisticsHashMap.get("空侧邮件作业区" + link);
+                        linkCostStatistics.setDepartment(department);
+                        linkCostStatistics.setCount(linkCostStatistics.getCount() + 1);
+                        linkCostStatistics.setTotal_cost(linkCostStatistics.getTotal_cost() + labor_cost / links_count);
+                    }
+                }
+            else if (department.equals("陆侧邮件作业区"))
+                for (String link : ground) {
+                    if (production_link.contains(link)) {
+                        LinkCostStatistics linkCostStatistics = linkCostStatisticsHashMap.get("陆侧邮件作业区" + link);
+                        linkCostStatistics.setDepartment(department);
+                        linkCostStatistics.setCount(linkCostStatistics.getCount() + 1);
+                        linkCostStatistics.setTotal_cost(linkCostStatistics.getTotal_cost() + labor_cost / links_count);
+                    }
+                }
         }
 
         StringBuilder json_data = new StringBuilder();
         json_data.append("{\"statistics\":[");
 
-        for (String link : production_link_list) {
+        Set<String> key_set = linkCostStatisticsHashMap.keySet();
+
+        for (String link : key_set) {
             LinkCostStatistics single = linkCostStatisticsHashMap.get(link);
             json_data.append("{");
 
@@ -575,14 +612,13 @@ public class QueryDataHandleService {
 
     /**
      * @Description: 生成生产环节的详细数据
-     * @Param: [employeeList, salaryDetailList, production_link]
+     * @Param: [employeeList, salaryDetailList]
      * @return: java.lang.String
      * @Author: lcx
      * @Date: 2018/10/9
      */
     public String generateOperationLinkDetailJsonData(List<Employee> employeeList,
-                                                      List<SalaryDetail> salaryDetailList,
-                                                      String production_link) {
+                                                      List<SalaryDetail> salaryDetailList) {
         if (employeeList == null || salaryDetailList == null)
             return "";
         if (employeeList.size() != salaryDetailList.size())
