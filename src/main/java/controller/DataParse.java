@@ -97,6 +97,7 @@ public class DataParse {
 
     /**对数据中的符号进行规整化*/
     private static String symbolicNormalization(String data) {
+        data = data.replace('\n','、');
         data = data.replace(',', '、');
         data = data.replace('，', '、');
         data = data.replace('/', '、');

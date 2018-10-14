@@ -56,6 +56,10 @@
           SELECT * FROM employee WHERE `name` = #{name}
     </select>
 
+    <select id="depAndDateIsExist" resultType="int">
+        SELECT COUNT(*) employee WHERE `department` #{param1} AND `expiration_date` = #{param2}
+    </select>
+
     <select id="getEmployeeByLink" resultMap="employeeMap" parameterType="String">
           SELECT * FROM employee WHERE production_link
           LIKE concat(concat('%',#{link}),'%')
@@ -70,8 +74,11 @@
     <select id="getEmployeeByDynamicCondition" resultMap="employeeMap" parameterType="hashmap">
         SELECT * FROM employee
         <where>
+            <if test="department == null and group == null and startTime == null and endTime == null">
+                FALSE
+            </if>
             <if test="department != null">
-                `department` IN
+                AND `department` IN
                 <foreach item="item" index="index" collection="department" open="(" separator="," close=")">
                     #{item}
                 </foreach>
@@ -83,7 +90,7 @@
                 </foreach>
             </if>
             <if test="startTime != null and endTime != null">
-                AND  `expiration_date` BETWEEN #{startTime} AND #{endTime}
+                AND `expiration_date` BETWEEN #{startTime} AND #{endTime}
             </if>
         </where>
     </select>
@@ -91,15 +98,36 @@
     <select id="getProductionLinkByDynamicCondition" resultMap="employeeMap" parameterType="hashmap">
         SELECT * FROM employee
         <where>
-            <if test="production_link != null">
-                (
-                <foreach item="item" index="index" collection="production_link" open="(" separator="OR" close=")">
-                    `production_link` LIKE concat(concat('%',#{item}),'%')
-                </foreach>
+            <if test="flat == null and air == null and ground == null and startTime == null and endTime == null">
+                FALSE
+            </if>
+            <if test="flat != null or air != null or ground != null">
+                AND ( FALSE
+                <if test="flat != null">
+                    OR ( `department` = "扁平件邮件作业区" AND
+                    <foreach item="item" index="index" collection="flat" open="(" separator="OR" close=")">
+                        `production_link` LIKE concat(concat('%',#{item}),'%')
+                    </foreach>
+                    )
+                </if>
+                <if test="air != null">
+                    OR ( `department` = "空侧邮件作业区" AND (
+                    <foreach item="item" index="index" collection="air" open="(" separator="OR" close=")">
+                        `production_link` LIKE concat(concat('%',#{item}),'%')
+                    </foreach>
+                    ))
+                </if>
+                <if test="ground != null">
+                    OR ( `department` = "陆侧邮件作业区" AND (
+                    <foreach item="item" index="index" collection="ground" open="(" separator="OR" close=")">
+                        `production_link` LIKE concat(concat('%',#{item}),'%')
+                    </foreach>
+                    ))
+                </if>
                 )
             </if>
             <if test="startTime != null and endTime != null">
-                AND  `expiration_date` BETWEEN #{startTime} AND #{endTime}
+                AND ( `expiration_date` BETWEEN #{startTime} AND #{endTime} )
             </if>
         </where>
     </select>

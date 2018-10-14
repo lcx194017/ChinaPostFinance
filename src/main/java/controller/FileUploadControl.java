@@ -128,12 +128,12 @@ public class FileUploadControl {
     }
 
     /**
-     * @Description: 接收前端上传的文件：接收并写数据库记录 -> 解析  ->入库 
-     * @Param: [request, response, description, date, type, file] 
+     * @Description: 接收前端上传的文件：接收并写数据库记录 -> 解析  ->入库
+     * @Param: [request, response, description, date, type, file]
      * @return: void
      * @Author: lcx
-     * @Date: 2018/10/11 
-     */ 
+     * @Date: 2018/10/11
+     */
     @RequestMapping(value = "/update_single/update_file", method = RequestMethod.POST)
     public void upload(HttpServletRequest request, HttpServletResponse response,
                        @RequestParam("description") String description,
@@ -226,7 +226,9 @@ public class FileUploadControl {
         return ip;
     }
 
-    private static Date dateTransform(String time) {
+    public static Date dateTransform(String time) {
+        if (time == null || time.length() == 0)
+            return null;
         String[] times = time.split("-");
         int year = Integer.parseInt(times[0]);
         int month = Integer.parseInt(times[1]);

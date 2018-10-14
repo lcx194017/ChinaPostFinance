@@ -60,6 +60,23 @@ public class QueryService {
         resultMap.put("salaryDetailList", salaryDetailList);
         return resultMap;
     }
+
+    /**
+     * @Description: 查询某个时间范围内的所有数据
+     * @Param: [date1, date2]
+     * @return: java.util.Map<java.lang.String,java.lang.Object>
+     * @Author: lcx
+     * @Date: 2018/10/14
+     */
+    @Transactional(readOnly = true)
+    public Map<String, Object> dateRangeQuery(Date date1, Date date2) throws RecordInvalidException{
+        List<Employee> employeeList = employeeDao.getEmployeeByDateRange(date1, date2);
+        List<SalaryDetail> salaryDetailList = getSalaryDetailByEmployee(employeeList);
+        Map<String, Object> resultMap = new HashMap<>();
+        resultMap.put("employeeList", employeeList);
+        resultMap.put("salaryDetailList", salaryDetailList);
+        return resultMap;
+    }
     
     /**
      * @Description: 依据前端选择条件，动态查询，params为HashMap结构 params:可能但不完全包括

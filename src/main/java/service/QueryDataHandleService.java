@@ -6,11 +6,13 @@ package service;
  */
 
 import domain.Employee;
+import others.ExpenseDetail;
 import others.LinkCostDetailTable;
 import others.LinkCostStatistics;
 import domain.SalaryDetail;
 import org.springframework.stereotype.Service;
 
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -18,6 +20,8 @@ import java.util.*;
  */
 @Service
 public class QueryDataHandleService {
+
+    private final static SimpleDateFormat format = new SimpleDateFormat("yyyy年MM月");
 
     private final static String[] EMPLOYEE_TABLE_ITEM = {"身份证号码", "姓名", "职务",
             "部门", "班组", "岗位", "生产环节", "日期"};
@@ -31,11 +35,68 @@ public class QueryDataHandleService {
             "外包人员管理费", "外包人员税费", "人工成本"
     };
 
+    //班组映射表，通过表找到数据库中信息到费用明细表的对应关系
+    private final static Map<String, Integer> GROUP_MAP;
+    private final static String[] GROUPS_NAME = {"接发班(空侧)", "人工处理班(空侧)", "封发班(空侧)",
+            "运行安保组(空侧)", "白班(空侧)", "综合班(空侧)", "借调(空侧)", "转运班(陆侧)",
+            "人工处理班(陆侧)", "封发班(陆侧)", "综合班(陆侧)", "借调(陆侧)", "分拣班(扁平)",
+            "塑封班(扁平)", "人工处理班(扁平)", "综合班(扁平)", "借调(扁平)", "包分机班组(设备)",
+            "胶带机班组(设备)", "扁平件班组(设备)", "信息班组(设备)", "库房班组(设备)", "综合班(设备)",
+            "查验班组(运输)", "客服班组(运输)", "综合班(运输)", "综合办公室", "计划财务部",
+            "人力资源部", "安全保卫部", "工会", "邮航", "战略责任中心"
+    };
+
+
+    static {
+        GROUP_MAP = new HashMap<>();
+        GROUP_MAP.put("空侧邮件作业区接发连班", 0);
+        GROUP_MAP.put("空侧邮件作业区人工处理班", 1);
+        GROUP_MAP.put("空侧邮件作业区封发连班", 2);
+        GROUP_MAP.put("空侧邮件作业区运行安保组", 3);
+        GROUP_MAP.put("空侧邮件作业区白班", 4);
+        GROUP_MAP.put("空侧邮件作业区综合班", 5);
+        GROUP_MAP.put("空侧邮件作业区借调", 6);
+
+        GROUP_MAP.put("陆侧邮件作业区转运班", 7);
+        GROUP_MAP.put("陆侧邮件作业区人工处理班", 8);
+        GROUP_MAP.put("陆侧邮件作业区封发班", 9);
+        GROUP_MAP.put("陆侧邮件作业区综合班", 10);
+        GROUP_MAP.put("陆侧邮件作业区借调", 11);
+
+        GROUP_MAP.put("扁平件侧邮件作业区分拣班", 12);
+        GROUP_MAP.put("扁平件邮件作业区塑封班", 13);
+        GROUP_MAP.put("扁平件邮件作业区人工处理班", 14);
+        GROUP_MAP.put("扁平件邮件作业区综合班", 15);
+        GROUP_MAP.put("扁平件邮件作业区借调", 16);
+
+        GROUP_MAP.put("技术保障部包分机班组", 17);
+        GROUP_MAP.put("技术保障部胶带机班组", 18);
+        GROUP_MAP.put("技术保障部扁平件班组", 19);
+        GROUP_MAP.put("技术保障部信息班组", 20);
+        GROUP_MAP.put("技术保障部库房班组", 21);
+        GROUP_MAP.put("技术保障部综合班", 22);
+
+        GROUP_MAP.put("生产指挥调度中心查验班组", 23);
+        GROUP_MAP.put("生产指挥调度中心客服班组", 24);
+        GROUP_MAP.put("生产指挥调度中心综合班", 25);
+
+        GROUP_MAP.put("综合办公室", 26);
+
+        GROUP_MAP.put("计划财务部", 27);
+        GROUP_MAP.put("人力资源部", 28);
+        GROUP_MAP.put("安全保卫部", 29);
+        GROUP_MAP.put("工会", 30);
+
+        GROUP_MAP.put("邮航", 31);
+        GROUP_MAP.put("战略责任中心", 32);
+    }
+
     private boolean[] employee_item_mark = new boolean[EMPLOYEE_TABLE_ITEM.length];
     private boolean[] salaryDetail_item_mark = new boolean[SALARY_DETAIL_TABLE_ITEM.length];
 
     private SalaryDetail total_statistics;
     private Set<String> person_statistics = new HashSet<>();  //用于人数统计，计算平均工资用
+
 
     private void init_params() {
         Arrays.fill(employee_item_mark, false);
@@ -44,22 +105,55 @@ public class QueryDataHandleService {
         person_statistics.clear();
     }
 
-
+    /**
+     * 只考虑到职务为空的情况
+     */
+    //    private void getEmployeeValidData(List<Employee> list) {
+//        if (list.size() != 0) {
+//            for (int i = 0; i < employee_item_mark.length; i++)
+//                employee_item_mark[i] = true;
+//
+//            int count = 0;
+//
+//            /**employee表中只有职务(level)可能为空*/
+//            for (Employee employee : list) {
+//                if (employee.getLevel() != null)
+//                    break;
+//                else
+//                    count++;
+//            }
+//            if (count == list.size())
+//                employee_item_mark[2] = false;
+//        }
+//    }
     private void getEmployeeValidData(List<Employee> list) {
-        for (int i = 0; i < employee_item_mark.length; i++)
-            employee_item_mark[i] = true;
+        int[] item_count = new int[EMPLOYEE_TABLE_ITEM.length];
+        if (list.size() != 0) {
+            for (int i = 0; i < employee_item_mark.length; i++)
+                employee_item_mark[i] = true;
 
-        int count = 0;
+            //ID和日期为主键，所以不为空，略过检查
+            for (Employee employee : list) {
+                if (employee.getName() == null)
+                    item_count[1]++;
+                if (employee.getLevel() == null)
+                    item_count[2]++;
+                if (employee.getDepartment() == null)
+                    item_count[3]++;
+                if (employee.getGroup() == null)
+                    item_count[4]++;
+                if (employee.getPost() == null)
+                    item_count[5]++;
+                if (employee.getProduction_link() == null)
+                    item_count[6]++;
+            }
 
-        /**employee表中只有职务(level)可能为空*/
-        for (Employee employee : list) {
-            if (employee.getLevel() != null)
-                break;
-            else
-                count++;
+            for (int i = 0; i < item_count.length; i++)
+                if (item_count[i] == list.size())
+                    employee_item_mark[i] = false;
+                else
+                    employee_item_mark[i] = true;
         }
-        if (count == list.size())
-            employee_item_mark[2] = false;
     }
 
     private void getSalaryDetailValidData(List<SalaryDetail> list) {
@@ -137,13 +231,13 @@ public class QueryDataHandleService {
                 item_count[34]++;
             if (salaryDetail.getLabor_cost() == 0)
                 item_count[35]++;
-
-            for (int i = 0; i < item_count.length; i++)
-                if (item_count[i] == list.size())
-                    salaryDetail_item_mark[i] = false;
-                else
-                    salaryDetail_item_mark[i] = true;
         }
+
+        for (int i = 0; i < item_count.length; i++)
+            if (item_count[i] == list.size())
+                salaryDetail_item_mark[i] = false;
+            else
+                salaryDetail_item_mark[i] = true;
 
     }
 
@@ -226,13 +320,19 @@ public class QueryDataHandleService {
     private StringBuilder generateHeaderJsonData() {
         StringBuilder header_json_data = new StringBuilder();
         header_json_data.append("\"header\": [");
+        int count = 0;
         for (int j = 0; j < employee_item_mark.length; j++)
-            if (employee_item_mark[j])
+            if (employee_item_mark[j]) {
                 header_json_data.append("\"").append(EMPLOYEE_TABLE_ITEM[j]).append("\",");
+                count++;
+            }
         for (int j = 2; j < salaryDetail_item_mark.length; j++)
-            if (salaryDetail_item_mark[j])
+            if (salaryDetail_item_mark[j]) {
                 header_json_data.append("\"").append(SALARY_DETAIL_TABLE_ITEM[j]).append("\",");
-        header_json_data.deleteCharAt(header_json_data.length() - 1);
+                count++;
+            }
+        if (count != 0)
+            header_json_data.deleteCharAt(header_json_data.length() - 1);
         header_json_data.append("],");
         return header_json_data;
     }
@@ -290,7 +390,8 @@ public class QueryDataHandleService {
                         break;
                     case 7:
                         if (null != employee.getExpiration_date())
-                            single_employee_json_data.append("\"").append(employee.getExpiration_date()).append("\",");
+                            //single_employee_json_data.append("\"").append(employee.getExpiration_date()).append("\",");
+                            single_employee_json_data.append("\"").append(format.format(employee.getExpiration_date())).append("\",");
                         else
                             single_employee_json_data.append(employee.getExpiration_date()).append(",");
                         break;
@@ -517,24 +618,27 @@ public class QueryDataHandleService {
             return "";
 
         HashMap<String, LinkCostStatistics> linkCostStatisticsHashMap = new HashMap<>();
-        for (String link : flat) {
-            LinkCostStatistics linkCostStatistics = new LinkCostStatistics();
-            linkCostStatistics.setDepartment("扁平件邮件作业区");
-            linkCostStatistics.setProduction_link(link);
-            linkCostStatisticsHashMap.put("扁平件邮件作业区" + link, linkCostStatistics);
-        }
-        for (String link : air) {
-            LinkCostStatistics linkCostStatistics = new LinkCostStatistics();
-            linkCostStatistics.setDepartment("空侧邮件作业区");
-            linkCostStatistics.setProduction_link(link);
-            linkCostStatisticsHashMap.put("空侧邮件作业区" + link, linkCostStatistics);
-        }
-        for (String link : ground) {
-            LinkCostStatistics linkCostStatistics = new LinkCostStatistics();
-            linkCostStatistics.setDepartment("陆侧邮件作业区");
-            linkCostStatistics.setProduction_link(link);
-            linkCostStatisticsHashMap.put("陆侧邮件作业区" + link, linkCostStatistics);
-        }
+        if (flat != null)
+            for (String link : flat) {
+                LinkCostStatistics linkCostStatistics = new LinkCostStatistics();
+                linkCostStatistics.setDepartment("扁平件邮件作业区");
+                linkCostStatistics.setProduction_link(link);
+                linkCostStatisticsHashMap.put("扁平件邮件作业区" + link, linkCostStatistics);
+            }
+        if (air != null)
+            for (String link : air) {
+                LinkCostStatistics linkCostStatistics = new LinkCostStatistics();
+                linkCostStatistics.setDepartment("空侧邮件作业区");
+                linkCostStatistics.setProduction_link(link);
+                linkCostStatisticsHashMap.put("空侧邮件作业区" + link, linkCostStatistics);
+            }
+        if (ground != null)
+            for (String link : ground) {
+                LinkCostStatistics linkCostStatistics = new LinkCostStatistics();
+                linkCostStatistics.setDepartment("陆侧邮件作业区");
+                linkCostStatistics.setProduction_link(link);
+                linkCostStatisticsHashMap.put("陆侧邮件作业区" + link, linkCostStatistics);
+            }
 
         //对查询的每条数据进行人工成本分摊
         for (int i = 0; i < employeeList.size(); i++) {
@@ -546,33 +650,37 @@ public class QueryDataHandleService {
             int links_count = production_link.split("、").length;  //单个员工涉及的环节数
             double labor_cost = salaryDetail.getLabor_cost();              //单个员工的人工成本
 
-            if (department.equals("扁平件邮件作业区"))
-                for (String link : flat) {
-                    if (production_link.contains(link)) {
-                        LinkCostStatistics linkCostStatistics = linkCostStatisticsHashMap.get("扁平件邮件作业区" + link);
-                        linkCostStatistics.setDepartment(department);
-                        linkCostStatistics.setCount(linkCostStatistics.getCount() + 1);
-                        linkCostStatistics.setTotal_cost(linkCostStatistics.getTotal_cost() + labor_cost / links_count);
+            if (department.equals("扁平件邮件作业区")) {
+                if (flat != null)
+                    for (String link : flat) {
+                        if (production_link.contains(link)) {
+                            LinkCostStatistics linkCostStatistics = linkCostStatisticsHashMap.get("扁平件邮件作业区" + link);
+                            linkCostStatistics.setDepartment(department);
+                            linkCostStatistics.setCount(linkCostStatistics.getCount() + 1);
+                            linkCostStatistics.setTotal_cost(linkCostStatistics.getTotal_cost() + labor_cost / links_count);
+                        }
                     }
-                }
-            else if (department.equals("空侧邮件作业区"))
-                for (String link : air) {
-                    if (production_link.contains(link)) {
-                        LinkCostStatistics linkCostStatistics = linkCostStatisticsHashMap.get("空侧邮件作业区" + link);
-                        linkCostStatistics.setDepartment(department);
-                        linkCostStatistics.setCount(linkCostStatistics.getCount() + 1);
-                        linkCostStatistics.setTotal_cost(linkCostStatistics.getTotal_cost() + labor_cost / links_count);
+            } else if (department.equals("空侧邮件作业区")) {
+                if (air != null)
+                    for (String link : air) {
+                        if (production_link.contains(link)) {
+                            LinkCostStatistics linkCostStatistics = linkCostStatisticsHashMap.get("空侧邮件作业区" + link);
+                            linkCostStatistics.setDepartment(department);
+                            linkCostStatistics.setCount(linkCostStatistics.getCount() + 1);
+                            linkCostStatistics.setTotal_cost(linkCostStatistics.getTotal_cost() + labor_cost / links_count);
+                        }
                     }
-                }
-            else if (department.equals("陆侧邮件作业区"))
-                for (String link : ground) {
-                    if (production_link.contains(link)) {
-                        LinkCostStatistics linkCostStatistics = linkCostStatisticsHashMap.get("陆侧邮件作业区" + link);
-                        linkCostStatistics.setDepartment(department);
-                        linkCostStatistics.setCount(linkCostStatistics.getCount() + 1);
-                        linkCostStatistics.setTotal_cost(linkCostStatistics.getTotal_cost() + labor_cost / links_count);
+            } else if (department.equals("陆侧邮件作业区")) {
+                if (ground != null)
+                    for (String link : ground) {
+                        if (production_link.contains(link)) {
+                            LinkCostStatistics linkCostStatistics = linkCostStatisticsHashMap.get("陆侧邮件作业区" + link);
+                            linkCostStatistics.setDepartment(department);
+                            linkCostStatistics.setCount(linkCostStatistics.getCount() + 1);
+                            linkCostStatistics.setTotal_cost(linkCostStatistics.getTotal_cost() + labor_cost / links_count);
+                        }
                     }
-                }
+            }
         }
 
         StringBuilder json_data = new StringBuilder();
@@ -603,7 +711,8 @@ public class QueryDataHandleService {
             json_data.append(single.getTotal_cost()).append("},");
         }
 
-        json_data.deleteCharAt(json_data.length() - 1);
+        if (linkCostStatisticsHashMap.size() != 0)
+            json_data.deleteCharAt(json_data.length() - 1);
 
         json_data.append("]}");
 
@@ -666,8 +775,66 @@ public class QueryDataHandleService {
             json_data.append("\"总成本\":");
             json_data.append("\"").append(map.get(id).getTotal_cost()).append("\"},");
         }
-        json_data.deleteCharAt(json_data.length() - 1);
+        if (map.size() != 0)
+            json_data.deleteCharAt(json_data.length() - 1);
         json_data.append("]}");
+        return json_data.toString();
+    }
+
+    public String generateStatisticCostDetailJsonData(List<Employee> employeeList,
+                                                      List<SalaryDetail> salaryDetailList) {
+        if (employeeList == null || salaryDetailList == null)
+            return "";
+        if (employeeList.size() != salaryDetailList.size())
+            return "";
+
+        //对应成本费用明细中的每一列
+        ExpenseDetail[] expenseDetails = new ExpenseDetail[GROUP_MAP.size()];
+        for (int i = 0; i < expenseDetails.length; i++)
+            expenseDetails[i] = new ExpenseDetail();
+
+        //对查询的日期范围内的每一条数据进行分类统计
+        for (int i = 0; i < employeeList.size(); i++) {
+            Employee employee = employeeList.get(i);
+            SalaryDetail salaryDetail = salaryDetailList.get(i);
+            String department = employee.getDepartment();
+            String group = employee.getGroup();
+            Integer index; //该员工属于明细表中的哪一列
+            if (department == null) continue;
+            if (group == null)
+                index = GROUP_MAP.get(department);
+            else
+                index = GROUP_MAP.get(department + group);
+            if (index != null) {
+                ExpenseDetail expenseDetail = expenseDetails[index];
+                expenseDetail.setManual_labor_cost(expenseDetail.getManual_labor_cost() +
+                        salaryDetail.getLabor_cost());
+                expenseDetail.setManual_wages(expenseDetail.getManual_wages() +
+                        salaryDetail.getBase_pay());
+                expenseDetail.setManual_wage_related_expenses(expenseDetail.getManual_wage_related_expenses() +
+                        100);
+                expenseDetail.setManual_employee_benefits(expenseDetail.getManual_employee_benefits() +
+                        100);
+                expenseDetail.setManual_staff_training_expense(expenseDetail.getManual_staff_training_expense() +
+                        100);
+                expenseDetail.setManual_accumulation_fund(expenseDetail.getManual_accumulation_fund() +
+                        100);
+                expenseDetail.setManual_social_security(expenseDetail.getManual_social_security() +
+                        100);
+                expenseDetail.setManual_outsourced_cost(expenseDetail.getManual_outsourced_cost() +
+                        100);
+            }
+        }
+        StringBuilder json_data = new StringBuilder();
+        json_data.append("{");
+
+        for (int i = 0; i < expenseDetails.length; i++) {
+            json_data.append("\"").append(GROUPS_NAME[i]).append("\":[");
+            json_data.append(expenseDetails[i].toString());
+            json_data.append("],");
+        }
+        json_data.deleteCharAt(json_data.length() - 1);
+        json_data.append("}");
         return json_data.toString();
     }
 }

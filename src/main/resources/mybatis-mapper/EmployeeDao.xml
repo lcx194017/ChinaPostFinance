@@ -74,8 +74,11 @@
     <select id="getEmployeeByDynamicCondition" resultMap="employeeMap" parameterType="hashmap">
         SELECT * FROM employee
         <where>
+            <if test="department == null and group == null and startTime == null and endTime == null">
+                FALSE
+            </if>
             <if test="department != null">
-                `department` IN
+                AND `department` IN
                 <foreach item="item" index="index" collection="department" open="(" separator="," close=")">
                     #{item}
                 </foreach>
@@ -95,14 +98,17 @@
     <select id="getProductionLinkByDynamicCondition" resultMap="employeeMap" parameterType="hashmap">
         SELECT * FROM employee
         <where>
+            <if test="flat == null and air == null and ground == null and startTime == null and endTime == null">
+                FALSE
+            </if>
             <if test="flat != null or air != null or ground != null">
-                ( FALSE
+                AND ( FALSE
                 <if test="flat != null">
-                    OR ( `department` = "扁平件邮件作业区" AND (
+                    OR ( `department` = "扁平件邮件作业区" AND
                     <foreach item="item" index="index" collection="flat" open="(" separator="OR" close=")">
                         `production_link` LIKE concat(concat('%',#{item}),'%')
                     </foreach>
-                    ))
+                    )
                 </if>
                 <if test="air != null">
                     OR ( `department` = "空侧邮件作业区" AND (
