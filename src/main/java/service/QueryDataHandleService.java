@@ -46,6 +46,21 @@ public class QueryDataHandleService {
             "人力资源部", "安全保卫部", "工会", "邮航", "战略责任中心"
     };
 
+    private final static Map<String, Integer> DEPARTMENT_MAP;
+    private final static String[] DEPARTMENTS_NAME = {
+            "空侧邮件作业区", "陆侧邮件作业区", "扁平件邮件作业区", "技术保障部", "生产指挥调度中心",
+            "综合办公室", "计划财务部", "人力资源部", "安全保卫部", "工会", "邮航", "战略"};
+
+    private final static Map<String, Integer> LINK_MAP;
+    private final static String[] LINKS_NAME = {
+            "车辆引导", "邮件卸车", "邮件驳运", "邮件过检", "总包开拆", "邮件扫描封发",
+            "二次供件", "本地信息处理", "质检巡查", "邮件装车发运", "人工处理", "分流",
+            "综合", "网运信息处理", "调箱", "交接门洞接收集装箱", "掏箱", "安检机后分类传输",
+            "空侧供件", "拒识邮件处理", "空侧封发装箱称重", "交邮", "收容处理", "人工处理",
+            "信息处理", "运保", "综合", "白班", "信盒传输线巡视", "非标件收集", "供件",
+            "辅助分拣", "分拣机巡视", "塑封操作", "空盒收集", "塑封机错包处理", "拒识邮件处理",
+            "收容邮件处理", "分拣封发专项邮件处理", "接发", "牵引车驾驶", "质检", "白班", "综合"
+    };
 
     static {
         GROUP_MAP = new HashMap<>();
@@ -89,6 +104,66 @@ public class QueryDataHandleService {
 
         GROUP_MAP.put("邮航", 31);
         GROUP_MAP.put("战略责任中心", 32);
+
+        DEPARTMENT_MAP = new HashMap<>();
+        DEPARTMENT_MAP.put("空侧邮件作业区", 0);
+        DEPARTMENT_MAP.put("陆侧邮件作业区", 1);
+        DEPARTMENT_MAP.put("扁平件邮件作业区", 2);
+        DEPARTMENT_MAP.put("技术保障部", 3);
+        DEPARTMENT_MAP.put("生产指挥调度中心", 4);
+        DEPARTMENT_MAP.put("综合办公室", 5);
+        DEPARTMENT_MAP.put("计划财务部", 6);
+        DEPARTMENT_MAP.put("人力资源部", 7);
+        DEPARTMENT_MAP.put("安全保卫部", 8);
+        DEPARTMENT_MAP.put("工会", 9);
+        DEPARTMENT_MAP.put("邮航", 10);
+        DEPARTMENT_MAP.put("战略", 11);
+
+        LINK_MAP = new HashMap<>();
+        LINK_MAP.put("陆侧邮件作业区车辆引导", 0);
+        LINK_MAP.put("陆侧邮件作业区邮件卸车", 1);
+        LINK_MAP.put("陆侧邮件作业区邮件驳运", 2);
+        LINK_MAP.put("陆侧邮件作业区邮件过检", 3);
+        LINK_MAP.put("陆侧邮件作业区总包开拆", 4);
+        LINK_MAP.put("陆侧邮件作业区邮件扫描封发", 5);
+        LINK_MAP.put("陆侧邮件作业区二次供件", 6);
+        LINK_MAP.put("陆侧邮件作业区本地信息处理", 7);
+        LINK_MAP.put("陆侧邮件作业区质检巡查", 8);
+        LINK_MAP.put("陆侧邮件作业区邮件装车发运", 9);
+        LINK_MAP.put("陆侧邮件作业区人工处理", 10);
+        LINK_MAP.put("陆侧邮件作业区分流", 11);
+        LINK_MAP.put("陆侧邮件作业区综合", 12);
+        LINK_MAP.put("陆侧邮件作业区网运信息处理", 13);
+        LINK_MAP.put("空侧邮件作业区调箱", 14);
+        LINK_MAP.put("空侧邮件作业区交接门洞接收集装箱", 15);
+        LINK_MAP.put("空侧邮件作业区掏箱", 16);
+        LINK_MAP.put("空侧邮件作业区安检机后分类传输", 17);
+        LINK_MAP.put("空侧邮件作业区空侧供件", 18);
+        LINK_MAP.put("空侧邮件作业区拒识邮件处理", 19);
+        LINK_MAP.put("空侧邮件作业区空侧封发装箱称重", 20);
+        LINK_MAP.put("空侧邮件作业区交邮", 21);
+        LINK_MAP.put("空侧邮件作业区收容处理", 22);
+        LINK_MAP.put("空侧邮件作业区人工处理", 23);
+        LINK_MAP.put("空侧邮件作业区信息处理", 24);
+        LINK_MAP.put("空侧邮件作业区运保", 25);
+        LINK_MAP.put("空侧邮件作业区综合", 26);
+        LINK_MAP.put("空侧邮件作业区白班", 27);
+        LINK_MAP.put("扁平件邮件作业区信盒传输线巡视", 28);
+        LINK_MAP.put("扁平件邮件作业区非标件收集", 29);
+        LINK_MAP.put("扁平件邮件作业区供件", 30);
+        LINK_MAP.put("扁平件邮件作业区辅助分拣", 31);
+        LINK_MAP.put("扁平件邮件作业区分拣机巡视", 32);
+        LINK_MAP.put("扁平件邮件作业区塑封操作", 33);
+        LINK_MAP.put("扁平件邮件作业区空盒收集", 34);
+        LINK_MAP.put("扁平件邮件作业区塑封机错包处理", 35);
+        LINK_MAP.put("扁平件邮件作业区拒识邮件处理", 36);
+        LINK_MAP.put("扁平件邮件作业区收容邮件处理", 37);
+        LINK_MAP.put("扁平件邮件作业区分拣封发专项邮件处理", 38);
+        LINK_MAP.put("扁平件邮件作业区接发", 39);
+        LINK_MAP.put("扁平件邮件作业区牵引车驾驶", 40);
+        LINK_MAP.put("扁平件邮件作业区质检", 41);
+        LINK_MAP.put("扁平件邮件作业区白班", 42);
+        LINK_MAP.put("扁平件邮件作业区综合", 43);
     }
 
     private boolean[] employee_item_mark = new boolean[EMPLOYEE_TABLE_ITEM.length];
@@ -105,27 +180,6 @@ public class QueryDataHandleService {
         person_statistics.clear();
     }
 
-    /**
-     * 只考虑到职务为空的情况
-     */
-    //    private void getEmployeeValidData(List<Employee> list) {
-//        if (list.size() != 0) {
-//            for (int i = 0; i < employee_item_mark.length; i++)
-//                employee_item_mark[i] = true;
-//
-//            int count = 0;
-//
-//            /**employee表中只有职务(level)可能为空*/
-//            for (Employee employee : list) {
-//                if (employee.getLevel() != null)
-//                    break;
-//                else
-//                    count++;
-//            }
-//            if (count == list.size())
-//                employee_item_mark[2] = false;
-//        }
-//    }
     private void getEmployeeValidData(List<Employee> list) {
         int[] item_count = new int[EMPLOYEE_TABLE_ITEM.length];
         if (list.size() != 0) {
@@ -781,8 +835,23 @@ public class QueryDataHandleService {
         return json_data.toString();
     }
 
-    public String generateStatisticCostDetailJsonData(List<Employee> employeeList,
-                                                      List<SalaryDetail> salaryDetailList) {
+    /**
+     * @Description: 工资=应发合计
+     * 公积金=企业承担住房公积金
+     * 社保=企业承担各类保险
+     * 补充医疗保险=补充医疗保险
+     * 职工教育经费=职工教育经费
+     * 职工福利费=职工福利费
+     * 企业年金=企业年金
+     * 工会经费=工会经费
+     * 外包费用=外包人员应发合计+外包人员管理费+外包人员税差+小时工费用
+     * @Param: [employeeList, salaryDetailList]
+     * @return: java.lang.String
+     * @Author: lcx
+     * @Date: 2018/10/15
+     */
+    public String generateStatisticCostDetailJsonDataByGroup(List<Employee> employeeList,
+                                                             List<SalaryDetail> salaryDetailList) {
         if (employeeList == null || salaryDetailList == null)
             return "";
         if (employeeList.size() != salaryDetailList.size())
@@ -806,30 +875,194 @@ public class QueryDataHandleService {
             else
                 index = GROUP_MAP.get(department + group);
             if (index != null) {
-                ExpenseDetail expenseDetail = expenseDetails[index];
-                expenseDetail.setManual_labor_cost(expenseDetail.getManual_labor_cost() +
-                        salaryDetail.getLabor_cost());
-                expenseDetail.setManual_wages(expenseDetail.getManual_wages() +
-                        salaryDetail.getBase_pay());
-                expenseDetail.setManual_wage_related_expenses(expenseDetail.getManual_wage_related_expenses() +
-                        100);
-                expenseDetail.setManual_employee_benefits(expenseDetail.getManual_employee_benefits() +
-                        100);
-                expenseDetail.setManual_staff_training_expense(expenseDetail.getManual_staff_training_expense() +
-                        100);
-                expenseDetail.setManual_accumulation_fund(expenseDetail.getManual_accumulation_fund() +
-                        100);
-                expenseDetail.setManual_social_security(expenseDetail.getManual_social_security() +
-                        100);
-                expenseDetail.setManual_outsourced_cost(expenseDetail.getManual_outsourced_cost() +
-                        100);
+                generateRowStatistics(expenseDetails, index, 1, employee, salaryDetail);
             }
         }
+
+        String result = generateStatisticalData(expenseDetails, GROUPS_NAME);
+        return result;
+    }
+
+    /**
+     * @Description: 将查询的数据按照部门的维度进行统计
+     * @Param: [employeeList, salaryDetailList]
+     * @return: java.lang.String
+     * @Author: lcx
+     * @Date: 2018/10/15
+     */
+    public String generateStatisticCostDetailJsonDataByDepartment(List<Employee> employeeList,
+                                                                  List<SalaryDetail> salaryDetailList) {
+        if (employeeList == null || salaryDetailList == null)
+            return "";
+        if (employeeList.size() != salaryDetailList.size())
+            return "";
+
+        //对应成本费用明细中的每一列
+        ExpenseDetail[] expenseDetails = new ExpenseDetail[DEPARTMENT_MAP.size()];
+        for (int i = 0; i < expenseDetails.length; i++)
+            expenseDetails[i] = new ExpenseDetail();
+
+        //对查询的日期范围内的每一条数据进行分类统计
+        for (int i = 0; i < employeeList.size(); i++) {
+            Employee employee = employeeList.get(i);
+            SalaryDetail salaryDetail = salaryDetailList.get(i);
+            String department = employee.getDepartment();
+            Integer index;
+            if (department == null) continue;
+
+            index = DEPARTMENT_MAP.get(department);    //通过map获取是部门报表中的哪一列数据
+
+            if (index != null) {
+                generateRowStatistics(expenseDetails, index, 1, employee, salaryDetail);
+            }
+        }
+
+        String result = generateStatisticalData(expenseDetails, DEPARTMENTS_NAME);
+        return result;
+    }
+
+    /**
+     * @Description: 将查询的数据按照环节进行统计
+     * @Param: [employeeList, salaryDetailList]
+     * @return: java.lang.String
+     * @Author: lcx
+     * @Date: 2018/10/15
+     */
+    public String generateStatisticCostDetailJsonDataByLink(List<Employee> employeeList,
+                                                            List<SalaryDetail> salaryDetailList) {
+        if (employeeList == null || salaryDetailList == null)
+            return "";
+        if (employeeList.size() != salaryDetailList.size())
+            return "";
+
+        //对应成本费用明细中的每一列
+        ExpenseDetail[] expenseDetails = new ExpenseDetail[LINK_MAP.size()];
+        for (int i = 0; i < expenseDetails.length; i++)
+            expenseDetails[i] = new ExpenseDetail();
+
+        //对查询的日期范围内的每一条数据进行分类统计
+        for (int i = 0; i < employeeList.size(); i++) {
+            Employee employee = employeeList.get(i);
+            SalaryDetail salaryDetail = salaryDetailList.get(i);
+
+            String department = employee.getDepartment();
+            if (department.equals("扁平件邮件作业区") || department.equals("空侧邮件作业区") ||
+                    department.equals("陆侧邮件作业区")) {
+                String links = employee.getProduction_link();    //获取员工的生产环节
+                String[] single_links = links.split("、");
+                for (String li : single_links) {
+                    Integer index = LINK_MAP.get(department + li);
+                    if (index != null) {
+                        generateRowStatistics(expenseDetails, index, single_links.length,
+                                employee, salaryDetail);
+                    }
+                }
+            }
+        }
+
+        ExpenseDetail[] expenseDetails_copy;
+        String[] names_copy;
+        String temp;
+
+        StringBuilder json_data = new StringBuilder();
+        json_data.append("{");
+        json_data.append("\"空侧邮件作业区\":[");
+
+        expenseDetails_copy = new ExpenseDetail[14];
+        names_copy = new String[14];
+        System.arraycopy(expenseDetails, 0, expenseDetails_copy, 0, 14);
+        System.arraycopy(LINKS_NAME, 0,names_copy,0,14);
+        temp = generateStatisticalData(expenseDetails_copy, names_copy);
+        json_data.append(temp);
+
+        json_data.append("],");
+        json_data.append("\"陆侧邮件作业区\":[");
+
+        expenseDetails_copy = new ExpenseDetail[14];
+        names_copy = new String[14];
+        System.arraycopy(expenseDetails, 14, expenseDetails_copy, 0, 14);
+        System.arraycopy(LINKS_NAME, 14,names_copy,0,14);
+        temp = generateStatisticalData(expenseDetails_copy, names_copy);
+        json_data.append(temp);
+
+        json_data.append("],");
+        json_data.append("\"扁平件邮件作业区\":[");
+
+        expenseDetails_copy = new ExpenseDetail[16];
+        names_copy = new String[16];
+        System.arraycopy(expenseDetails, 28, expenseDetails_copy, 0, 16);
+        System.arraycopy(LINKS_NAME, 28,names_copy,0,16);
+        temp = generateStatisticalData(expenseDetails_copy, names_copy);
+        json_data.append(temp);
+
+        json_data.append("]");
+        json_data.append("}");
+
+       return json_data.toString();
+    }
+
+    /**
+     * @Description: 生成统计报表的一列数据，proportion是为了环节分摊添加的，
+     * 其余场景下该值为1
+     * @Param: [expenseDetails, index, proportion, employee, salaryDetail]
+     * @return: void
+     * @Author: lcx
+     * @Date: 2018/10/15
+     */
+    private static void generateRowStatistics(ExpenseDetail[] expenseDetails,
+                                              int index,
+                                              int proportion,
+                                              Employee employee,
+                                              SalaryDetail salaryDetail) {
+        double temp;
+        ExpenseDetail expenseDetail = expenseDetails[index];
+
+        temp = salaryDetail.getLabor_cost() / proportion;
+        expenseDetail.setManual_labor_cost(expenseDetail.getManual_labor_cost() + temp);
+
+        temp = salaryDetail.getBase_pay() / proportion;
+        expenseDetail.setManual_wages(expenseDetail.getManual_wages() + temp);
+
+        expenseDetail.setManual_wage_related_expenses(expenseDetail.getManual_wage_related_expenses() +
+                100);
+
+        //职工福利费
+        temp = salaryDetail.getWelfare_funds() / proportion;
+        expenseDetail.setManual_employee_benefits(expenseDetail.getManual_employee_benefits() +
+                temp);
+
+        //职工教育经费
+        temp = salaryDetail.getStaff_training_expense() / proportion;
+        expenseDetail.setManual_staff_training_expense(expenseDetail.getManual_staff_training_expense() +
+                temp);
+
+        //公积金
+        temp = salaryDetail.getEnterprises_undertake_housing_provident() / proportion;
+        expenseDetail.setManual_accumulation_fund(expenseDetail.getManual_accumulation_fund() +
+                temp);
+
+        //社保
+        temp = salaryDetail.getEnterprises_undertake_various_insurance() / proportion;
+        expenseDetail.setManual_social_security(expenseDetail.getManual_social_security() +
+                temp);
+
+        //外包费用(还没加小时工)
+        if (employee.getLevel() == null) {
+            temp = salaryDetail.getJoint_plan() +
+                    salaryDetail.getOutsourced_personnel_management_fee() +
+                    salaryDetail.getOutsourced_personnel_taxes_fee();
+            expenseDetail.setManual_outsourced_cost(expenseDetail.getManual_outsourced_cost() +
+                    temp);
+        }
+    }
+
+    private static String generateStatisticalData(ExpenseDetail[] expenseDetails, String[] HEADS) {
+
         StringBuilder json_data = new StringBuilder();
         json_data.append("{");
 
         for (int i = 0; i < expenseDetails.length; i++) {
-            json_data.append("\"").append(GROUPS_NAME[i]).append("\":[");
+            json_data.append("\"").append(HEADS[i]).append("\":[");
             json_data.append(expenseDetails[i].toString());
             json_data.append("],");
         }

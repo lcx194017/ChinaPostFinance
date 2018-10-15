@@ -39,11 +39,11 @@ public class StatisticControl {
 
     @RequestMapping(value = "/get_link_data", method = RequestMethod.POST)
     public void get_link_data(@RequestParam("startTime") String startTime,
-                                     @RequestParam("endTime") String endTime,
-                                     @RequestParam("flat") List<String> flat,
-                                     @RequestParam("air") List<String> air,
-                                     @RequestParam("ground") List<String> ground,
-                                     HttpServletResponse response) {
+                              @RequestParam("endTime") String endTime,
+                              @RequestParam("flat") List<String> flat,
+                              @RequestParam("air") List<String> air,
+                              @RequestParam("ground") List<String> ground,
+                              HttpServletResponse response) {
         HashMap<String, Object> params = new HashMap<>();
         //输入String日期转换成Date格式(ManualControl中的静态方法)
         dateTransform(params, startTime, endTime);
@@ -79,11 +79,11 @@ public class StatisticControl {
 
     @RequestMapping(value = "/get_link_detail_data", method = RequestMethod.POST)
     public void get_link_detail_data(@RequestParam("startTime") String startTime,
-                                       @RequestParam("endTime") String endTime,
-                                       @RequestParam("flat") List<String> flat,
-                                       @RequestParam("air") List<String> air,
-                                       @RequestParam("ground") List<String> ground,
-                                       HttpServletResponse response) {
+                                     @RequestParam("endTime") String endTime,
+                                     @RequestParam("flat") List<String> flat,
+                                     @RequestParam("air") List<String> air,
+                                     @RequestParam("ground") List<String> ground,
+                                     HttpServletResponse response) {
         HashMap<String, Object> params = new HashMap<>();
         //输入String日期转换成Date格式
         dateTransform(params, startTime, endTime);
@@ -119,9 +119,16 @@ public class StatisticControl {
     }
 
 
-    @RequestMapping(value = "/get_cost_detail_data", method = RequestMethod.POST)
-    public void get_cost_detail_data(@RequestParam("time") String time,
-                                       HttpServletResponse response) {
+    /**
+     * @Description: 按照作业区或者班组获得统计报表数据
+     * @Param: [time, response]
+     * @return: void
+     * @Author: lcx
+     * @Date: 2018/10/15
+     */
+    @RequestMapping(value = "/cost/get_cost_center_group", method = RequestMethod.POST)
+    public void get_cost_center_group(@RequestParam("time") String time,
+                                      HttpServletResponse response) {
         Date date = FileUploadControl.dateTransform(time);
         Map<String, Object> map = null;
         String result = null;
@@ -136,7 +143,83 @@ public class StatisticControl {
         if (map != null) {
             List<Employee> employeeList = (List<Employee>) map.get("employeeList");
             List<SalaryDetail> salaryDetailList = (List<SalaryDetail>) map.get("salaryDetailList");
-            result = queryDataHandleService.generateStatisticCostDetailJsonData(employeeList,
+            result = queryDataHandleService.generateStatisticCostDetailJsonDataByGroup(employeeList,
+                    salaryDetailList);
+        }
+        response.setContentType("text/html;charset=UTF-8");
+        //设置跨域请求
+        response.setHeader("Access-Control-Allow-Origin", "*");
+
+        try {
+            response.getWriter().println(result);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * @Description: 按照部门获取统计报表数据
+     * @Param: [time, response]
+     * @return: void
+     * @Author: lcx
+     * @Date: 2018/10/15
+     */
+    @RequestMapping(value = "/cost/get_cost_department", method = RequestMethod.POST)
+    public void get_cost_department(@RequestParam("time") String time,
+                                    HttpServletResponse response) {
+        Date date = FileUploadControl.dateTransform(time);
+        Map<String, Object> map = null;
+        String result = null;
+
+        try {
+            map = queryService.dateRangeQuery(date, date);
+        } catch (RecordInvalidException e) {
+            e.printStackTrace();
+            result = "{\"error\": -112}";
+        }
+
+        if (map != null) {
+            List<Employee> employeeList = (List<Employee>) map.get("employeeList");
+            List<SalaryDetail> salaryDetailList = (List<SalaryDetail>) map.get("salaryDetailList");
+            result = queryDataHandleService.generateStatisticCostDetailJsonDataByDepartment(employeeList,
+                    salaryDetailList);
+        }
+        response.setContentType("text/html;charset=UTF-8");
+        //设置跨域请求
+        response.setHeader("Access-Control-Allow-Origin", "*");
+
+        try {
+            response.getWriter().println(result);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * @Description: 按照生产环节获取统计报表数据
+     * @Param: [time, response]
+     * @return: void
+     * @Author: lcx
+     * @Date: 2018/10/15
+     */
+    @RequestMapping(value = "/cost/get_cost_link", method = RequestMethod.POST)
+    public void get_cost_link(@RequestParam("time") String time,
+                              HttpServletResponse response) {
+        Date date = FileUploadControl.dateTransform(time);
+        Map<String, Object> map = null;
+        String result = null;
+
+        try {
+            map = queryService.dateRangeQuery(date, date);
+        } catch (RecordInvalidException e) {
+            e.printStackTrace();
+            result = "{\"error\": -112}";
+        }
+
+        if (map != null) {
+            List<Employee> employeeList = (List<Employee>) map.get("employeeList");
+            List<SalaryDetail> salaryDetailList = (List<SalaryDetail>) map.get("salaryDetailList");
+            result = queryDataHandleService.generateStatisticCostDetailJsonDataByLink(employeeList,
                     salaryDetailList);
         }
         response.setContentType("text/html;charset=UTF-8");

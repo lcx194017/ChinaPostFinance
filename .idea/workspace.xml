@@ -10,22 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43515eba-a19e-4db3-934d-7beace7196ad" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/StatisticControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/others/ExpenseDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/others/ResCenterCollection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/DataParse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/DataParse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/FileUploadControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/FileUploadControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ManualControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ManualControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/StatisticControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/StatisticControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/others/ResCenterCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/others/ResCenterCollection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/QueryDataHandleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/QueryDataHandleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/QueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/QueryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/service/DataParseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/service/DataParseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ChinaPostFinance/WEB-INF/classes/dao/EmployeeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ChinaPostFinance/WEB-INF/classes/dao/EmployeeDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ChinaPostFinance/WEB-INF/classes/mybatis-mapper/EmployeeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ChinaPostFinance/WEB-INF/classes/mybatis-mapper/EmployeeDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/EmployeeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/EmployeeDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-mapper/EmployeeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-mapper/EmployeeDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/DataParseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/service/DataParseTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -86,12 +75,11 @@
       <file leaf-file-name="ManualControl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/ManualControl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6669">
-              <caret line="346" column="16" selection-start-line="346" selection-start-column="16" selection-end-line="346" selection-end-column="16" />
+            <state relative-caret-position="229">
+              <caret line="89" column="79" lean-forward="true" selection-start-line="89" selection-start-column="79" selection-end-line="89" selection-end-column="79" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1123#1189#0" />
-                <element signature="method#departmentThree_base_getBaseGroupData#0;class#ManualControl#0" />
               </folding>
             </state>
           </provider>
@@ -100,11 +88,10 @@
       <file leaf-file-name="QueryDataHandleService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/QueryDataHandleService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="836" column="27" selection-start-line="836" selection-start-column="27" selection-end-line="836" selection-end-column="27" />
+            <state relative-caret-position="1495">
+              <caret line="998" column="30" selection-start-line="998" selection-start-column="30" selection-end-line="998" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="docComment;method#getEmployeeValidData#0;class#QueryDataHandleService#0" />
                 <element signature="method#getEmployeeValidData#0;class#QueryDataHandleService#0" />
                 <element signature="method#getSalaryDetailValidData#0;class#QueryDataHandleService#0" />
                 <element signature="method#calculate_statistical_info#0;class#QueryDataHandleService#0" />
@@ -116,7 +103,8 @@
                 <element signature="docComment;method#generateOperationLinkJsonData#0;class#QueryDataHandleService#0" />
                 <element signature="method#generateOperationLinkJsonData#0;class#QueryDataHandleService#0" />
                 <element signature="docComment;method#generateOperationLinkDetailJsonData#0;class#QueryDataHandleService#0" />
-                <element signature="method#generateOperationLinkDetailJsonData#0;class#QueryDataHandleService#0" />
+                <element signature="method#generateStatisticCostDetailJsonDataByGroup#0;class#QueryDataHandleService#0" />
+                <element signature="method#generateStatisticCostDetailJsonDataByDepartment#0;class#QueryDataHandleService#0" />
               </folding>
             </state>
           </provider>
@@ -125,10 +113,11 @@
       <file leaf-file-name="StatisticControl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/StatisticControl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="143" column="25" lean-forward="true" selection-start-line="143" selection-start-column="25" selection-end-line="143" selection-end-column="25" />
+            <state relative-caret-position="430">
+              <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#get_cost_center_group#0;class#StatisticControl#0" />
               </folding>
             </state>
           </provider>
@@ -137,7 +126,7 @@
       <file leaf-file-name="ExpenseDetail.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/others/ExpenseDetail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2089">
+            <state relative-caret-position="12420">
               <caret line="628" column="46" selection-start-line="628" selection-start-column="46" selection-end-line="628" selection-end-column="46" />
             </state>
           </provider>
@@ -155,8 +144,8 @@
       <file leaf-file-name="ResCenterCollection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/others/ResCenterCollection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="25" column="34" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="34" />
+            <state relative-caret-position="483">
+              <caret line="28" column="52" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="52" />
               <folding>
                 <element signature="docComment;class#ResCenterCollection#0" />
               </folding>
@@ -207,6 +196,7 @@
       <find>date</find>
       <find>ground</find>
       <find>GROUPMAP</find>
+      <find>GROUPS_NAME</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -251,16 +241,16 @@
         <option value="$PROJECT_DIR$/src/main/java/service/SalaryService.java" />
         <option value="$PROJECT_DIR$/src/main/test/service/QueryServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/DataParse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/others/ResCenterCollection.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml" />
         <option value="$PROJECT_DIR$/src/main/test/service/DataParseTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/ManualControl.java" />
         <option value="$PROJECT_DIR$/src/main/java/others/AA.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/QueryService.java" />
         <option value="$PROJECT_DIR$/src/main/java/others/ExpenseDetail.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/StatisticControl.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/FileUploadControl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/others/ResCenterCollection.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/QueryDataHandleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/StatisticControl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/ManualControl.java" />
       </list>
     </option>
   </component>
@@ -765,7 +755,7 @@
       <workItem from="1538924803002" duration="13264000" />
       <workItem from="1538991066938" duration="38939000" />
       <workItem from="1539137355312" duration="56743000" />
-      <workItem from="1539304408714" duration="42607000" />
+      <workItem from="1539304408714" duration="57484000" />
     </task>
     <task id="LOCAL-00001" summary="完成数据表的动态查询">
       <created>1538871865162</created>
@@ -795,7 +785,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539259613169</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="添加月明细统计">
+      <created>1539504854676</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1539504854676</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -831,7 +828,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215589000" />
+    <option name="totallyTimeSpent" value="230466000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -856,7 +853,7 @@
       <window_info id="Structure" order="6" sideWeight="0.5017422" side_tool="true" weight="0.23495702" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="11" visible="true" weight="0.52781546" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.52781546" />
       <window_info anchor="bottom" id="TODO" order="14" weight="0.32971507" />
       <window_info anchor="bottom" id="Messages" order="3" weight="0.3283582" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
@@ -890,7 +887,8 @@
     <MESSAGE value="JSON数据校验完成" />
     <MESSAGE value="数据通，上传文件待完成" />
     <MESSAGE value="生产环节修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="生产环节修改" />
+    <MESSAGE value="添加月明细统计" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加月明细统计" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -955,20 +953,8 @@
           <properties />
           <option name="timeStamp" value="86" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controller/StatisticControl.java</url>
-          <line>124</line>
-          <properties />
-          <option name="timeStamp" value="124" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controller/StatisticControl.java</url>
-          <line>143</line>
-          <properties />
-          <option name="timeStamp" value="126" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="127" />
+      <option name="time" value="133" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1053,7 +1039,6 @@
           <caret line="135" column="57" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;method#getEmployeeValidData#0;class#QueryDataHandleService#0" />
             <element signature="method#getEmployeeValidData#0;class#QueryDataHandleService#0" />
             <element signature="method#getSalaryDetailValidData#0;class#QueryDataHandleService#0" />
             <element signature="method#calculate_statistical_info#0;class#QueryDataHandleService#0" />
@@ -1065,7 +1050,8 @@
             <element signature="docComment;method#generateOperationLinkJsonData#0;class#QueryDataHandleService#0" />
             <element signature="method#generateOperationLinkJsonData#0;class#QueryDataHandleService#0" />
             <element signature="docComment;method#generateOperationLinkDetailJsonData#0;class#QueryDataHandleService#0" />
-            <element signature="method#generateOperationLinkDetailJsonData#0;class#QueryDataHandleService#0" />
+            <element signature="method#generateStatisticCostDetailJsonDataByGroup#0;class#QueryDataHandleService#0" />
+            <element signature="method#generateStatisticCostDetailJsonDataByDepartment#0;class#QueryDataHandleService#0" />
           </folding>
         </state>
       </provider>
@@ -1355,28 +1341,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/others/ResCenterCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="25" column="34" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="34" />
-          <folding>
-            <element signature="docComment;class#ResCenterCollection#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ManualControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6669">
-          <caret line="346" column="16" selection-start-line="346" selection-start-column="16" selection-end-line="346" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1123#1189#0" />
-            <element signature="method#departmentThree_base_getBaseGroupData#0;class#ManualControl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="489">
@@ -1394,13 +1358,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/others/ExpenseDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2089">
-          <caret line="628" column="46" selection-start-line="628" selection-start-column="46" selection-end-line="628" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/QueryService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
@@ -1408,29 +1365,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#departmentAtDateExist#0;class#QueryService#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/QueryDataHandleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="836" column="27" selection-start-line="836" selection-start-column="27" selection-end-line="836" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#getEmployeeValidData#0;class#QueryDataHandleService#0" />
-            <element signature="method#getEmployeeValidData#0;class#QueryDataHandleService#0" />
-            <element signature="method#getSalaryDetailValidData#0;class#QueryDataHandleService#0" />
-            <element signature="method#calculate_statistical_info#0;class#QueryDataHandleService#0" />
-            <element signature="method#generateHeaderJsonData#0;class#QueryDataHandleService#0" />
-            <element signature="method#generateEmployeeJsonData#0;class#QueryDataHandleService#0" />
-            <element signature="method#generateSalaryDetailJsonData#0;class#QueryDataHandleService#0" />
-            <element signature="docComment;method#generateOperationAreaJsonData#0;class#QueryDataHandleService#0" />
-            <element signature="method#generateOperationAreaJsonData#0;class#QueryDataHandleService#0" />
-            <element signature="docComment;method#generateOperationLinkJsonData#0;class#QueryDataHandleService#0" />
-            <element signature="method#generateOperationLinkJsonData#0;class#QueryDataHandleService#0" />
-            <element signature="docComment;method#generateOperationLinkDetailJsonData#0;class#QueryDataHandleService#0" />
-            <element signature="method#generateOperationLinkDetailJsonData#0;class#QueryDataHandleService#0" />
           </folding>
         </state>
       </provider>
@@ -1449,12 +1383,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/StatisticControl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/others/ResCenterCollection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="143" column="25" lean-forward="true" selection-start-line="143" selection-start-column="25" selection-end-line="143" selection-end-column="25" />
+        <state relative-caret-position="483">
+          <caret line="28" column="52" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="52" />
+          <folding>
+            <element signature="docComment;class#ResCenterCollection#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/others/ExpenseDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12420">
+          <caret line="628" column="46" selection-start-line="628" selection-start-column="46" selection-end-line="628" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/QueryDataHandleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1495">
+          <caret line="998" column="30" selection-start-line="998" selection-start-column="30" selection-end-line="998" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getEmployeeValidData#0;class#QueryDataHandleService#0" />
+            <element signature="method#getSalaryDetailValidData#0;class#QueryDataHandleService#0" />
+            <element signature="method#calculate_statistical_info#0;class#QueryDataHandleService#0" />
+            <element signature="method#generateHeaderJsonData#0;class#QueryDataHandleService#0" />
+            <element signature="method#generateEmployeeJsonData#0;class#QueryDataHandleService#0" />
+            <element signature="method#generateSalaryDetailJsonData#0;class#QueryDataHandleService#0" />
+            <element signature="docComment;method#generateOperationAreaJsonData#0;class#QueryDataHandleService#0" />
+            <element signature="method#generateOperationAreaJsonData#0;class#QueryDataHandleService#0" />
+            <element signature="docComment;method#generateOperationLinkJsonData#0;class#QueryDataHandleService#0" />
+            <element signature="method#generateOperationLinkJsonData#0;class#QueryDataHandleService#0" />
+            <element signature="docComment;method#generateOperationLinkDetailJsonData#0;class#QueryDataHandleService#0" />
+            <element signature="method#generateStatisticCostDetailJsonDataByGroup#0;class#QueryDataHandleService#0" />
+            <element signature="method#generateStatisticCostDetailJsonDataByDepartment#0;class#QueryDataHandleService#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ManualControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="89" column="79" lean-forward="true" selection-start-line="89" selection-start-column="79" selection-end-line="89" selection-end-column="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1123#1189#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/StatisticControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#get_cost_center_group#0;class#StatisticControl#0" />
           </folding>
         </state>
       </provider>

@@ -87,8 +87,8 @@ public class ManualControl {
         //输入String日期转换成Date格式
         dateTransform(params, startTime, endTime);
         for (String dep : department) {
-            String[] centers = ResCenterCollection.getRESPONSIBILITYCENTERS();
-            LinkedList<String>[] linkedLists = ResCenterCollection.getLINKEDLISTS();
+            String[] centers = ResCenterCollection.getRESPONSIBILITY_CENTERS();
+            LinkedList<String>[] linkedLists = ResCenterCollection.getLINKED_LISTS();
             for (int i = 0; i < centers.length; i++) {
                 if (dep.equals(centers[i])) {
                     department_transform = linkedLists[i];

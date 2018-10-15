@@ -26,11 +26,11 @@ public class ResCenterCollection {
         LINKED_LISTS[5].add("安全保卫部");
     }
 
-    public static String[] getRESPONSIBILITYCENTERS() {
+    public static String[] getRESPONSIBILITY_CENTERS() {
         return RESPONSIBILITY_CENTERS;
     }
 
-    public static LinkedList<String>[] getLINKEDLISTS() {
+    public static LinkedList<String>[] getLINKED_LISTS() {
         return LINKED_LISTS;
     }
 
