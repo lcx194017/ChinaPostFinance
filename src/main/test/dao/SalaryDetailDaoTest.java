@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 
 /**
  * @author lcx :liu.changxin@qq.com
- * @data 2018/10/6 15:02
+ * @date 2018/10/6 15:02
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath*:/smart-context.xml")

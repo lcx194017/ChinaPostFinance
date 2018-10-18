@@ -2,7 +2,7 @@ package service;
 
 /**
  * @author lcx :liu.changxin@qq.com
- * @data 2018/10/3 16:48
+ * @date 2018/10/3 16:48
  */
 
 import domain.Employee;
@@ -741,8 +741,9 @@ public class QueryDataHandleService {
         json_data.append("{\"statistics\":[");
 
         Set<String> key_set = linkCostStatisticsHashMap.keySet();
-
-        for (String link : key_set) {
+        List<String> key_list = new LinkedList<>(key_set);
+        Collections.sort(key_list);
+        for (String link : key_list) {
             LinkCostStatistics single = linkCostStatisticsHashMap.get(link);
             json_data.append("{");
 
@@ -966,36 +967,42 @@ public class QueryDataHandleService {
 
         StringBuilder json_data = new StringBuilder();
         json_data.append("{");
-        json_data.append("\"空侧邮件作业区\":[");
+        json_data.append("\"空侧邮件作业区\":{");
 
         expenseDetails_copy = new ExpenseDetail[14];
         names_copy = new String[14];
         System.arraycopy(expenseDetails, 0, expenseDetails_copy, 0, 14);
         System.arraycopy(LINKS_NAME, 0,names_copy,0,14);
         temp = generateStatisticalData(expenseDetails_copy, names_copy);
+        temp = temp.replace("{", "");
+        temp = temp.replace("}", "");
         json_data.append(temp);
 
-        json_data.append("],");
-        json_data.append("\"陆侧邮件作业区\":[");
+        json_data.append("},");
+        json_data.append("\"陆侧邮件作业区\":{");
 
         expenseDetails_copy = new ExpenseDetail[14];
         names_copy = new String[14];
         System.arraycopy(expenseDetails, 14, expenseDetails_copy, 0, 14);
         System.arraycopy(LINKS_NAME, 14,names_copy,0,14);
         temp = generateStatisticalData(expenseDetails_copy, names_copy);
+        temp = temp.replace("{", "");
+        temp = temp.replace("}", "");
         json_data.append(temp);
 
-        json_data.append("],");
-        json_data.append("\"扁平件邮件作业区\":[");
+        json_data.append("},");
+        json_data.append("\"扁平件邮件作业区\":{");
 
         expenseDetails_copy = new ExpenseDetail[16];
         names_copy = new String[16];
         System.arraycopy(expenseDetails, 28, expenseDetails_copy, 0, 16);
         System.arraycopy(LINKS_NAME, 28,names_copy,0,16);
         temp = generateStatisticalData(expenseDetails_copy, names_copy);
+        temp = temp.replace("{", "");
+        temp = temp.replace("}", "");
         json_data.append(temp);
 
-        json_data.append("]");
+        json_data.append("}");
         json_data.append("}");
 
        return json_data.toString();

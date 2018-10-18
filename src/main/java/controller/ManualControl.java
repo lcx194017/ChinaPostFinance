@@ -19,7 +19,7 @@ import java.util.*;
 
 /**
  * @author lcx :liu.changxin@qq.com
- * @data 2018/10/9 8:33
+ * @date 2018/10/9 8:33
  */
 @Controller
 @RequestMapping(value = "/manual")

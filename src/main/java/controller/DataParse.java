@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @author lcx :liu.changxin@qq.com
- * @data 2018/9/30 18:02
+ * @date 2018/9/30 18:02
  * 类功能：完成Excel数据的解析，解析后交给Service层录入数据库
  */
 public class DataParse {

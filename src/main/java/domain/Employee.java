@@ -6,9 +6,9 @@ import java.util.Map;
 
 /**
  * @author lcx :liu.changxin@qq.com
- * @data 2018/9/30 16:57
+ * @date 2018/9/30 16:57
  */
-public class Employee {
+public class Employee{
     public static final Map<String, Integer> contents = new HashMap<String, Integer>();
     private String[] contents_value = new String[7];
 

@@ -6,9 +6,9 @@
 
     <insert id="insertUploadRecord" parameterType="UploadRecord">
       INSERT INTO
-      file_upload_record(`file_name`, `file_type`, `storage_path`, `upload_date`, `upload_ip`, `operator`, `desc`)
+      file_upload_record(`file_name`, `file_type`, `data_date`, `storage_path`, `upload_date`, `upload_ip`, `operator`, `desc`)
       VALUES
-      (#{file_name}, #{file_type}, #{storage_path}, #{upload_date}, #{upload_ip}, #{operator}, #{desc})
+      (#{file_name}, #{file_type}, #{data_date}, #{storage_path}, #{upload_date}, #{upload_ip}, #{operator}, #{desc})
     </insert>
 
     <resultMap id="uploadRecordMap" type="UploadRecord">
@@ -16,6 +16,7 @@
         <result property="file_name" column="file_name"></result>
         <result property="file_type" column="file_type"></result>
         <result property="storage_path" column="storage_path"></result>
+        <result property="data_date" column="data_date"></result>
         <result property="upload_date" column="upload_date"></result>
         <result property="upload_ip" column="upload_ip"></result>
         <result property="operator" column="operator"></result>
@@ -24,6 +25,11 @@
 
     <select id="getAllUploadRecords" resultType="map">
         SELECT * from  file_upload_record
+    </select>
+
+    <select id="queryDepartmentMonthExist" resultType="int">
+         SELECT COUNT(*) from file_upload_record where
+         `file_type` = #{param1} AND `data_date` = #{param2}
     </select>
 
     <select id="queryFileExist" resultType="int">

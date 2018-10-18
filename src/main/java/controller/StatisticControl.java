@@ -19,7 +19,7 @@ import static controller.ManualControl.dateTransform;
 
 /**
  * @author lcx :liu.changxin@qq.com
- * @data 2018/10/14 9:27
+ * @date 2018/10/14 9:27
  */
 @Controller
 @RequestMapping(value = "/statistics")

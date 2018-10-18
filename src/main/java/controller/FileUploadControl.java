@@ -23,7 +23,7 @@ import java.util.Map;
 
 /**
  * @author lcx :liu.changxin@qq.com
- * @data 2018/10/7 23:21
+ * @date 2018/10/7 23:21
  */
 
 @Controller
@@ -86,15 +86,19 @@ public class FileUploadControl {
      * @Author: lcx
      * @Date: 2018/10/10
      */
-    @RequestMapping(value = "/update_single/validate_file")
-    public void updateSingle_validateFile(@RequestParam("file_name") String file_name,
-                                          @RequestParam("file_type") String file_type,
+    @RequestMapping(value = "/update_single/validate_file", method = RequestMethod.POST)
+    public void updateSingle_validateFile(@RequestParam("file_type") String file_type,
+                                          @RequestParam("time") String time,
                                           HttpServletResponse response) {
-        String result = "OK";
-        if (file_name != null && file_type != null && !file_name.equals("") && !file_type.equals("")) {
-            int count = fileUploadService.validateFile(file_name, file_type);
+
+        String result = "{\"verify\":\"ok\"}";
+
+        Date date = dateTransform(time);    //上传数据的月份
+
+        if (file_type != null && !file_type.equals("")) {
+            int count = fileUploadService.validateFile(file_type, date);
             if (count > 0)
-                result = "EXIST";
+                result = "{\"verify\":\"exist\"}";
         }
 
         response.setContentType("text/html;charset=UTF-8");
@@ -108,25 +112,6 @@ public class FileUploadControl {
         }
     }
 
-    @RequestMapping(value = "/update_single/update_file", method = RequestMethod.GET)
-    public void upload(HttpServletRequest request, HttpServletResponse response) {
-
-        try {
-            response.setContentType("text/html;charset=UTF-8");
-            response.getWriter().println("success");
-
-        } catch (IOException e) {
-            e.printStackTrace();
-            response.setContentType("text/html;charset=UTF-8");
-            try {
-                response.getWriter().println("error");
-            } catch (IOException e1) {
-                e1.printStackTrace();
-            }
-        }
-
-    }
-
     /**
      * @Description: 接收前端上传的文件：接收并写数据库记录 -> 解析  ->入库
      * @Param: [request, response, description, date, type, file]
@@ -137,8 +122,8 @@ public class FileUploadControl {
     @RequestMapping(value = "/update_single/update_file", method = RequestMethod.POST)
     public void upload(HttpServletRequest request, HttpServletResponse response,
                        @RequestParam("description") String description,
-                       @RequestParam("date") String date,
-                       @RequestParam("type") String type,
+                       @RequestParam("time") String time,
+                       @RequestParam("file_type") String file_type,
                        @RequestParam("file") MultipartFile file) {
 
         String result = null;
@@ -147,46 +132,51 @@ public class FileUploadControl {
 
             //按照存储基地址/年月份/类型/文件名称的方式存储上传的文件
             //前端应该做一次过滤，如果传递的数据无效，则文件存储在默认路径下
-            if (date == null || date.length() == 0)
-                date = "default_date";
-            if (type == null || type.length() == 0)
-                type = "default_type";
+            if (time == null || time.length() == 0)
+                time = "default_time";
+            if (file_type == null || file_type.length() == 0)
+                file_type = "default_type";
 
+            Date date = dateTransform(time);
+
+            //生成服务器端存储路径
             String path = request.getServletContext().getRealPath(
-                    File.separator + date + File.separator + type);
+                    File.separator + time + File.separator + file_type);
             String IP = getIpAddress(request);
 
-            int count = fileUploadService.uploadAndInsertRecord(type, path, file,
+            int count = fileUploadService.uploadAndInsertRecord(file_type, path, date, file,
                     IP, description);
 
             if (count < 0)
-                result = "RECEIVE FAIL";
+                result = "{\"upload\":\"receive fail\"}";
             else {
-                //对数据进行解析和插入
-                if (date != null && date.length() != 0) {
-                    Date salary_data = dateTransform(date);
+                if (date != null) {
+                    //对数据进行解析和插入
                     Map<String, Employee> employeeMap = new HashMap<>();
                     Map<String, SalaryDetail> salaryDetailMap = new HashMap<>();
                     String filename = file.getOriginalFilename();
                     String filePath = path + File.separator + filename;
+
                     //解析完成的数据时没有日期的，需要根据选的日期进行设定
                     int res = DataParse.ReadExcelData(filePath, employeeMap, salaryDetailMap);
                     if (res == 0) {
                         try {
-                            int update_res = salaryService.insertOrUpdateDate(employeeMap, salaryDetailMap, salary_data);
+                            int update_res = salaryService.insertOrUpdateDate(employeeMap, salaryDetailMap, date);
                             if (update_res == 0)
-                                result = "SUCCESS";
+                                result = "{\"upload\":\"success\"}";
                         } catch (RecordInvalidException e) {
                             e.printStackTrace();
-                            result = "INVALID DATA";    //存在无效数据
+                            result = "{\"upload\":\"invalid data\"}";    //存在无效数据
                         }
                     } else {
-                        result = "FILE PARSE FAIL";    //文件解析失败
+                        result = "{\"upload\":\"parse fail\"}";    //文件解析失败
                     }
+                } else {
+                    result = "{\"upload\":\"empty date\"}";
                 }
             }
         } else {
-            result = "EMPTY FILE";
+            result = "{\"upload\":\"empty file\"}";
         }
 
         response.setContentType("text/html;charset=UTF-8");

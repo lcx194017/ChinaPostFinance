@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 
 /**
  * @author lcx :liu.changxin@qq.com
- * @data 2018/10/3 13:42
+ * @date 2018/10/3 13:42
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath*:/smart-context.xml")
@@ -109,5 +109,19 @@ public class EmployeeDaoTest {
 
         List<Employee> list = employeeDao.getProductionLinkByDynamicCondition(params);
         System.out.println(list.size());
+    }
+
+    @Test
+    public void updateEmployeeGroup() {
+        //int counts = employeeDao.updateEmployeeGroup("人工", "人工处理班");
+//        int counts = employeeDao.updateEmployeeGroup("封发", "封发班");
+//        System.out.println(counts);
+//        counts = employeeDao.updateEmployeeGroup("综合", "综合班");
+//        System.out.println(counts);
+        int counts = employeeDao.updateEmployeeGroup("查验", "查验班组");
+        System.out.println(counts);
+        counts = employeeDao.updateEmployeeGroup("客服", "客服班组");
+        System.out.println(counts);
+
     }
 }

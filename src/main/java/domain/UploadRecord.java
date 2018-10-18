@@ -5,7 +5,7 @@ import java.util.Date;
 
 /**
  * @author lcx :liu.changxin@qq.com
- * @data 2018/10/7 22:29
+ * @date 2018/10/7 22:29
  * 功能：用于记录文件上传
  */
 public class UploadRecord implements Serializable {
@@ -13,6 +13,7 @@ public class UploadRecord implements Serializable {
     private String file_name;
     private String file_type;
     private String storage_path;
+    private Date data_date;
     private Date upload_date;
     private String upload_ip;
     private String operator;
@@ -31,6 +32,10 @@ public class UploadRecord implements Serializable {
 
     public String getFile_type() {
         return file_type;
+    }
+
+    public Date getData_date() {
+        return data_date;
     }
 
     public String getStorage_path() {
@@ -63,6 +68,10 @@ public class UploadRecord implements Serializable {
 
     public void setFile_type(String file_type) {
         this.file_type = file_type;
+    }
+
+    public void setData_date(Date data_date) {
+        this.data_date = data_date;
     }
 
     public void setStorage_path(String storage_path) {

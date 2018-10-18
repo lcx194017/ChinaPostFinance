@@ -2,7 +2,7 @@ package others;
 
 /**
  * @author lcx :liu.changxin@qq.com
- * @data 2018/10/10 9:12
+ * @date 2018/10/10 9:12
  */
 public class LinkCostDetailTable {
     private String id;

@@ -14,7 +14,7 @@ import java.util.*;
 
 /**
  * @author lcx :liu.changxin@qq.com
- * @data 2018/10/7 20:45
+ * @date 2018/10/7 20:45
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath*:/smart-context.xml")

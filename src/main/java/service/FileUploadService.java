@@ -13,7 +13,7 @@ import java.util.Date;
 
 /**
  * @author lcx :liu.changxin@qq.com
- * @data 2018/10/10 22:00
+ * @date 2018/10/10 22:00
  */
 @Service
 public class FileUploadService {
@@ -26,12 +26,12 @@ public class FileUploadService {
     }
 
     @Transactional(readOnly = true)
-    public int validateFile(String fileName, String file_type) {
-        return uploadRecordDao.queryFileExist(fileName, file_type);
+    public int validateFile(String file_type, Date date) {
+        return uploadRecordDao.queryDepartmentMonthExist(file_type, date);
     }
 
     @Transactional
-    public int uploadAndInsertRecord(String type, String path, MultipartFile file, String IP, String description) {
+    public int uploadAndInsertRecord(String type, String path, Date date, MultipartFile file, String IP, String description) {
 
         String filename = file.getOriginalFilename();
         File filepath = new File(path, filename);
@@ -47,6 +47,7 @@ public class FileUploadService {
             UploadRecord uploadRecord = new UploadRecord();
             uploadRecord.setFile_name(filename);
             uploadRecord.setFile_type(type);
+            uploadRecord.setData_date(date);
             uploadRecord.setStorage_path(path + filename);
             uploadRecord.setUpload_date(new Date());
             uploadRecord.setUpload_ip(IP);

@@ -2,7 +2,7 @@ package others;
 
 /**
  * @author lcx :liu.changxin@qq.com
- * @data 2018/10/8 21:00
+ * @date 2018/10/8 21:00
  * 环节成本均摊统计类
  */
 public class LinkCostStatistics {

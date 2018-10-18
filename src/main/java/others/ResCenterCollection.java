@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 /**
  * @author lcx :liu.changxin@qq.com
- * @data 2018/10/13 19:49
+ * @date 2018/10/13 19:49
  * 责任中心集合类
  */
 public class ResCenterCollection {

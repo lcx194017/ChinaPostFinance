@@ -36,6 +36,13 @@
         WHERE id = #{id} AND expiration_date = #{expiration_date}
     </update>
 
+
+    <update id="updateEmployeeGroup">
+        UPDATE employee SET
+        `group` = #{param2}
+        WHERE `group` = #{param1}
+    </update>
+
     <resultMap id="employeeMap" type="Employee">
         <id property="id" column="id"></id>
         <result property="name" column="name"></result>

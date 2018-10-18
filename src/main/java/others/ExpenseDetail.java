@@ -2,7 +2,7 @@ package others;
 
 /**
  * @author lcx :liu.changxin@qq.com
- * @data 2018/10/14 10:17
+ * @date 2018/10/14 10:17
  * 费用明细，用于生成总的费用报表，该类对应报表完成一列
  */
 public class ExpenseDetail {

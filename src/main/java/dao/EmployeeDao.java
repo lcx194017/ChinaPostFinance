@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * @author lcx :liu.changxin@qq.com
- * @data 2018/10/3 13:24
+ * @date 2018/10/3 13:24
  */
 public interface EmployeeDao {
 
@@ -27,6 +27,9 @@ public interface EmployeeDao {
 
     /**通过日期范围获取指定时间段的员工信息*/
     List<Employee> getEmployeeByDateRange(Date date1, Date date2);
+
+    /**修改员工的班组信息*/
+    int updateEmployeeGroup(String old_post, String new_post);
 
     /**根据员工姓名进行查询*/
     List<Employee> getEmployeeByName(String name);
