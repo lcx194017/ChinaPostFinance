@@ -22,8 +22,11 @@ public interface EmployeeDao {
     /**对已经存在的员工某月数据进行更新*/
     void updateEmployee(Employee employee);
 
-    /**根据部门和日期判断数据是不是已经上传*/
-    int depAndDateIsExist(String department, Date date);
+    /**通过部门和日期删除旧数据*/
+    void deleteByDepartmentDate(String department, Date date);
+
+    /**根据部门和日期获取已经上传的记录*/
+    List<Employee> depAndDateExist(String department, Date date);
 
     /**通过日期范围获取指定时间段的员工信息*/
     List<Employee> getEmployeeByDateRange(Date date1, Date date2);

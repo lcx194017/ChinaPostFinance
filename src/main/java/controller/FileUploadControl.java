@@ -5,6 +5,7 @@ import domain.SalaryDetail;
 import exception.RecordInvalidException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -31,7 +32,6 @@ import java.util.Map;
 public class FileUploadControl {
 
     private FileUploadService fileUploadService;
-    private QueryService queryService;
     private SalaryService salaryService;
 
     @Autowired
@@ -40,43 +40,8 @@ public class FileUploadControl {
     }
 
     @Autowired
-    public void setQueryService(QueryService queryService) {
-        this.queryService = queryService;
-    }
-
-    @Autowired
     public void setSalaryService(SalaryService salaryService) {
         this.salaryService = salaryService;
-    }
-
-    /**
-     * @Description: 根据选择的时间和部门校验数据是否已经入库
-     * @Param: []
-     * @return: void
-     * @Author: lcx
-     * @Date: 2018/10/10
-     */
-    @RequestMapping(value = "/update_single/validate_time_dep")
-    public void updateSingle_validate_timeDep(@RequestParam("department") String department,
-                                              @RequestParam("time") String time,
-                                              HttpServletResponse response) {
-        String result = "OK";
-        if (department != null && time != null && !department.equals("") && !time.equals("")) {
-            //日期转换
-            Date date = dateTransform(time);
-            int count = queryService.departmentAtDateExist(department, date);
-            if (count > 0)
-                result = "EXIST";
-        }
-        response.setContentType("text/html;charset=UTF-8");
-        //设置跨域请求
-        response.setHeader("Access-Control-Allow-Origin", "*");
-
-        try {
-            response.getWriter().println(result);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     /**
@@ -124,6 +89,7 @@ public class FileUploadControl {
                        @RequestParam("description") String description,
                        @RequestParam("time") String time,
                        @RequestParam("file_type") String file_type,
+                       @RequestParam("deal") String deal,
                        @RequestParam("file") MultipartFile file) {
 
         String result = null;
@@ -159,14 +125,22 @@ public class FileUploadControl {
 
                     //解析完成的数据时没有日期的，需要根据选的日期进行设定
                     int res = DataParse.ReadExcelData(filePath, employeeMap, salaryDetailMap);
-                    if (res == 0) {
-                        try {
-                            int update_res = salaryService.insertOrUpdateDate(employeeMap, salaryDetailMap, date);
-                            if (update_res == 0)
-                                result = "{\"upload\":\"success\"}";
-                        } catch (RecordInvalidException e) {
-                            e.printStackTrace();
-                            result = "{\"upload\":\"invalid data\"}";    //存在无效数据
+                    if (res == 0) {    //数据解析失败
+                        if (deal.equals("delete") || deal.equals("update")) {
+                            if (deal.equals("delete"))
+                                salaryService.deleteOldData(file_type, date);
+                            try {
+                                int update_res = salaryService.insertOrUpdateDate(employeeMap, salaryDetailMap, date);
+                                if (update_res == 0) {
+                                    salaryService.updateGroupName();
+                                    result = "{\"upload\":\"success\"}";
+                                }
+                            } catch (RecordInvalidException e) {
+                                e.printStackTrace();
+                                result = "{\"upload\":\"invalid data\"}";    //存在无效数据
+                            }
+                        } else {
+                            result = "{\"upload\":\"invalid action\"}";
                         }
                     } else {
                         result = "{\"upload\":\"parse fail\"}";    //文件解析失败

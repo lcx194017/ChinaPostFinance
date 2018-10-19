@@ -43,6 +43,12 @@
         WHERE `group` = #{param1}
     </update>
 
+    <delete id="deleteByDepartmentDate">
+        DELETE FROM employee
+        WHERE
+        `department` = #{param1} AND expiration_date = #{param2}
+    </delete>
+
     <resultMap id="employeeMap" type="Employee">
         <id property="id" column="id"></id>
         <result property="name" column="name"></result>
@@ -63,8 +69,9 @@
           SELECT * FROM employee WHERE `name` = #{name}
     </select>
 
-    <select id="depAndDateIsExist" resultType="int">
-        SELECT COUNT(*) employee WHERE `department` #{param1} AND `expiration_date` = #{param2}
+    <select id="depAndDateExist" resultMap="employeeMap">
+        SELECT * FROM employee
+        WHERE `department` #{param1} AND `expiration_date` = #{param2}
     </select>
 
     <select id="getEmployeeByLink" resultMap="employeeMap" parameterType="String">

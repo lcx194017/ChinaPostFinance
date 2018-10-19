@@ -200,6 +200,13 @@
         WHERE id = #{id} AND `pay_date` = #{pay_date}
     </update>
 
+    <delete id="deleteSalaryRecord" parameterType="list">
+        DELETE FROM salary_detail WHERE
+        <foreach collection="list" item="employee" index="index" open="(" separator="OR" close=")">
+            `id` = #{employee.id} AND `pay_date` = {employee.expiration_date}
+        </foreach>
+    </delete>
+
     <delete id="deleteSalaryRecordExist" parameterType="Date">
         DELETE FROM salary_detail WHERE `pay_date` = #{date}
     </delete>

@@ -83,11 +83,17 @@ public class SalaryService {
         if (employeeMap.size() != salaryDetailMap.size())
             throw new RecordInvalidException("数据信息不对等");
 
-        Employee employee = employeeMap.get(0);
+        Set<String> set = employeeMap.keySet();
+        String random_key = null;
+        for (String s : set) {
+            random_key = s;
+            break;
+        }
+        Employee employee = employeeMap.get(random_key);
         String department = employee.getDepartment();
 
         //通过employee表就可以知道该部门本月的数据是不是已经录入
-        int count = employeeDao.depAndDateIsExist(department, date);
+        int count = employeeDao.depAndDateExist(department, date).size();
         if (count == 0) {   //该部门本月数据没有录入，可以批量插入
             Set<String> keySet = employeeMap.keySet();
             List<Employee> emp_list = new LinkedList<>();
@@ -110,5 +116,37 @@ public class SalaryService {
             insertSalaryData(employeeMap, salaryDetailMap, date);
         }
         return 0;
+    }
+
+    @Transactional
+    public void deleteOldData(String department, Date date) {
+        List<Employee> employeeList = employeeDao.depAndDateExist(department, date);
+        salaryDetailDao.deleteSalaryRecord(employeeList);
+        employeeDao.deleteByDepartmentDate(department, date);
+    }
+
+    /**
+     * @Description: 目前数据还不稳定，某些班组字段不统一，在此统一修改
+     * @Param: []
+     * @return: void
+     * @Author: lcx
+     * @Date: 2018/10/19
+     */
+    @Transactional
+    public void updateGroupName() {
+        int counts = employeeDao.updateEmployeeGroup("人工", "人工处理班");
+        System.out.println("人工 -> 人工处理班：" + counts);
+
+        counts = employeeDao.updateEmployeeGroup("封发", "封发班");
+        System.out.println("封发 -> 封发班：" + counts);
+
+        counts = employeeDao.updateEmployeeGroup("综合", "综合班");
+        System.out.println("综合 -> 综合班" + counts);
+
+        counts = employeeDao.updateEmployeeGroup("查验", "查验班组");
+        System.out.println("查验 -> 查验班组" + counts);
+
+        counts = employeeDao.updateEmployeeGroup("客服", "客服班组");
+        System.out.println("客服 -> 客服班组" + counts);
     }
 }

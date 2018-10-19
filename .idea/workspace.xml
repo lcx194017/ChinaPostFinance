@@ -11,36 +11,15 @@
   <component name="ChangeListManager">
     <list default="true" id="43515eba-a19e-4db3-934d-7beace7196ad" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/DataParse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/DataParse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/FileUploadControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/FileUploadControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ManualControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ManualControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/StatisticControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/StatisticControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/EmployeeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/EmployeeDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/SalaryDetailDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/SalaryDetailDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UploadRecordDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UploadRecordDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/SalaryDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/SalaryDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/UploadRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/UploadRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exception/RecordInvalidException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exception/RecordInvalidException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/others/ExpenseDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/others/ExpenseDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/others/LinkCostDetailTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/others/LinkCostDetailTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/others/LinkCostStatistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/others/LinkCostStatistics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/others/ResCenterCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/others/ResCenterCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/FileUploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/FileUploadService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/QueryDataHandleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/QueryDataHandleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/QueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/QueryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/SalaryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/SalaryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/UploadRecordDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/UploadRecordDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/SalaryDetailDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/SalaryDetailDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/dao/SalaryDetailDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/dao/SalaryDetailDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/service/DataParseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/service/DataParseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/service/QueryServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/service/QueryServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ChinaPostFinance/WEB-INF/classes/dao/EmployeeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ChinaPostFinance/WEB-INF/classes/dao/EmployeeDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ChinaPostFinance/WEB-INF/classes/mybatis-mapper/EmployeeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ChinaPostFinance/WEB-INF/classes/mybatis-mapper/EmployeeDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/EmployeeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/EmployeeDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-mapper/EmployeeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-mapper/EmployeeDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/dao/EmployeeDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/dao/EmployeeDaoTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -52,24 +31,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DockManager">
-    <window id="1">
+    <window id="5">
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="UploadRecordDao.java" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/main/java/dao/UploadRecordDao.java">
+            <file leaf-file-name="SalaryService.java" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/main/java/service/SalaryService.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="273">
-                    <caret line="14" column="54" lean-forward="true" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="UploadRecordDao.xml" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/UploadRecordDao.xml">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="541">
-                    <caret line="36" column="31" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="31" />
+                  <state relative-caret-position="138">
+                    <caret line="135" column="31" selection-start-line="135" selection-start-column="16" selection-end-line="135" selection-end-column="31" />
                   </state>
                 </provider>
               </entry>
@@ -84,26 +54,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FileUploadControl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FileUploadControl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/FileUploadControl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-729">
-              <caret line="100" column="38" lean-forward="true" selection-start-line="100" selection-start-column="38" selection-end-line="100" selection-end-column="38" />
+            <state relative-caret-position="-1203">
+              <caret line="131" column="33" lean-forward="true" selection-start-line="131" selection-start-column="33" selection-end-line="131" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1410#1411#0" expanded="true" />
-                <element signature="e#1460#1461#0" expanded="true" />
+                <element signature="method#setFileUploadService#0;class#FileUploadControl#0" />
                 <element signature="docComment;method#getIpAddress#0;class#FileUploadControl#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileUploadService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/FileUploadService.java">
+      <file leaf-file-name="ManualControl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/ManualControl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+            <state relative-caret-position="511">
+              <caret line="250" lean-forward="true" selection-start-line="250" selection-end-line="250" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataParse.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/DataParse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1095">
+              <caret line="99" column="38" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeDaoTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="128" column="50" lean-forward="true" selection-start-line="115" selection-start-column="7" selection-end-line="128" selection-end-column="50" />
+              <folding>
+                <element signature="method#insertEmployee#0;class#EmployeeDaoTest#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,7 +104,7 @@
       <file leaf-file-name="StatisticControl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/StatisticControl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
+            <state relative-caret-position="754">
               <caret line="169" column="44" lean-forward="true" selection-start-line="169" selection-start-column="44" selection-end-line="169" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -121,41 +114,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExpenseDetail.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/others/ExpenseDetail.java">
+      <file leaf-file-name="EmployeeDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/EmployeeDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1305">
-              <caret line="628" column="46" selection-start-line="628" selection-start-column="46" selection-end-line="628" selection-end-column="46" />
+            <state relative-caret-position="229">
+              <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UploadRecord.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/domain/UploadRecord.java">
+      <file leaf-file-name="SalaryDetailDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/SalaryDetailDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1215">
-              <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+            <state relative-caret-position="310">
+              <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ManualControl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/ManualControl.java">
+      <file leaf-file-name="UploadRecordDao.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/UploadRecordDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4174">
-              <caret line="178" column="41" lean-forward="true" selection-start-line="178" selection-start-column="41" selection-end-line="178" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LinkCostDetailTable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/others/LinkCostDetailTable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="460">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
@@ -163,11 +144,9 @@
       <file leaf-file-name="EmployeeDao.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="513">
+              <caret line="42" column="32" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="32" />
               <folding>
-                <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
-                <element signature="n#select#3;n#mapper#0;n#!!top" />
                 <element signature="n#select#4;n#mapper#0;n#!!top" />
                 <element signature="n#select#5;n#mapper#0;n#!!top" />
               </folding>
@@ -175,20 +154,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LinkCostStatistics.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/others/LinkCostStatistics.java">
+      <file leaf-file-name="SalaryDetailDao.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/SalaryDetailDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResCenterCollection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/others/ResCenterCollection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+            <state relative-caret-position="297">
+              <caret line="156" selection-start-line="202" selection-start-column="16" selection-end-line="202" selection-end-column="34" />
+              <folding>
+                <element signature="n#insert#0;n#mapper#0;n#!!top" />
+                <element signature="n#foreach#0;n#insert#1;n#mapper#0;n#!!top" />
+                <element signature="n#update#0;n#mapper#0;n#!!top" />
+                <element signature="n#delete#0;n#mapper#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -228,6 +204,8 @@
       <find>GROUPS_NAME</find>
       <find>get_</find>
       <find>file_type</find>
+      <find>insertSalaryData</find>
+      <find>COUN</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -248,8 +226,6 @@
         <option value="$PROJECT_DIR$/src/main/java/service/QueryDataPro.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/LaborSalaryService.java" />
         <option value="$PROJECT_DIR$/src/main/java/exception/RecordExistException.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/SalaryDetailDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/SalaryDetailDao.java" />
         <option value="$PROJECT_DIR$/src/main/test/dao/SalaryDetailDaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/QueryDataPro.java" />
         <option value="$PROJECT_DIR$/src/main/resources/smart-context.xml" />
@@ -263,18 +239,12 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/domain/LinkCostDetailTable.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/SalaryService.java" />
         <option value="$PROJECT_DIR$/src/main/test/service/QueryServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/DataParse.java" />
         <option value="$PROJECT_DIR$/src/main/test/service/DataParseTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/others/AA.java" />
         <option value="$PROJECT_DIR$/src/main/java/others/ExpenseDetail.java" />
         <option value="$PROJECT_DIR$/src/main/java/others/ResCenterCollection.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/EmployeeDao.java" />
-        <option value="$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/QueryService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/ManualControl.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/StatisticControl.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/Employee.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/QueryDataHandleService.java" />
@@ -282,6 +252,14 @@
         <option value="$PROJECT_DIR$/src/main/java/dao/UploadRecordDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/UploadRecordDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/service/FileUploadService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/ManualControl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/SalaryDetailDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/SalaryDetailDao.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/service/QueryService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/EmployeeDao.java" />
+        <option value="$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/SalaryService.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/FileUploadControl.java" />
       </list>
     </option>
@@ -324,8 +302,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-149" />
-    <option name="y" value="-10" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1456" />
     <option name="height" value="876" />
   </component>
@@ -791,7 +769,7 @@
       <workItem from="1539712964384" duration="287000" />
       <workItem from="1539735948167" duration="3137000" />
       <workItem from="1539780167468" duration="609000" />
-      <workItem from="1539822324406" duration="4890000" />
+      <workItem from="1539822324406" duration="20843000" />
     </task>
     <task id="LOCAL-00001" summary="完成数据表的动态查询">
       <created>1538871865162</created>
@@ -835,7 +813,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539593966607</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add file upload">
+      <created>1539827297830</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1539827297830</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -871,7 +856,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="253654000" />
+    <option name="totallyTimeSpent" value="269607000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -894,7 +879,7 @@
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="0" />
       <window_info anchor="right" id="Database" order="2" />
-      <window_info id="Structure" order="6" sideWeight="0.5017422" side_tool="true" weight="0.23495702" />
+      <window_info id="Structure" order="6" sideWeight="0.50203526" side_tool="true" weight="0.25286534" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="11" sideWeight="0.49928367" weight="0.49525103" />
@@ -908,7 +893,7 @@
       <window_info anchor="bottom" id="Run" order="9" weight="0.3283582" />
       <window_info anchor="bottom" id="Spring" order="1" weight="0.32971507" />
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.32971507" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4991274" visible="true" weight="0.25286534" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.4979647" visible="true" weight="0.25286534" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info id="Favorites" order="3" sideWeight="0.5011287" side_tool="true" weight="0.23495702" />
@@ -933,7 +918,8 @@
     <MESSAGE value="生产环节修改" />
     <MESSAGE value="添加月明细统计" />
     <MESSAGE value="完成月统计数据4张表" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成月统计数据4张表" />
+    <MESSAGE value="add file upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="add file upload" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -975,12 +961,6 @@
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controller/ManualControl.java</url>
-          <line>54</line>
-          <properties />
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/test/service/QueryServiceTest.java</url>
           <line>91</line>
           <properties />
@@ -993,12 +973,6 @@
           <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controller/ManualControl.java</url>
-          <line>62</line>
-          <properties />
-          <option name="timeStamp" value="86" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/service/QueryService.java</url>
           <line>128</line>
           <properties />
@@ -1006,18 +980,36 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/controller/FileUploadControl.java</url>
-          <line>93</line>
+          <line>158</line>
           <properties />
-          <option name="timeStamp" value="145" />
+          <option name="timeStamp" value="148" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/controller/FileUploadControl.java</url>
-          <line>133</line>
+          <line>96</line>
           <properties />
-          <option name="timeStamp" value="146" />
+          <option name="timeStamp" value="149" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controller/FileUploadControl.java</url>
+          <line>58</line>
+          <properties />
+          <option name="timeStamp" value="150" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controller/FileUploadControl.java</url>
+          <line>73</line>
+          <properties />
+          <option name="timeStamp" value="151" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/service/SalaryService.java</url>
+          <line>79</line>
+          <properties />
+          <option name="timeStamp" value="152" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="147" />
+      <option name="time" value="153" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1025,13 +1017,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/test/service/DataParseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1269">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
@@ -1226,54 +1211,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/SalaryDetailDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="164" column="32" selection-start-line="164" selection-start-column="32" selection-end-line="164" selection-end-column="32" />
-          <folding>
-            <element signature="n#insert#0;n#mapper#0;n#!!top" />
-            <element signature="n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#foreach#0;n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.12.RELEASE/spring-web-4.3.12.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="211" selection-start-line="211" selection-end-line="211" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/DataParse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="99" column="38" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/SalaryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1242">
-          <caret line="76" column="15" selection-start-line="76" selection-start-column="15" selection-end-line="76" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/SalaryDetailDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="123" column="35" selection-start-line="123" selection-start-column="35" selection-end-line="123" selection-end-column="35" />
-          <folding>
-            <element signature="method#insertEmployee#0;class#EmployeeDaoTest#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1291,24 +1232,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/QueryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2133">
-          <caret line="92" selection-start-line="92" selection-end-line="92" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#departmentAtDateExist#0;class#QueryService#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/EmployeeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1369,19 +1292,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
-            <element signature="n#select#3;n#mapper#0;n#!!top" />
-            <element signature="n#select#4;n#mapper#0;n#!!top" />
-            <element signature="n#select#5;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/others/ExpenseDetail.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1305">
@@ -1389,31 +1299,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ManualControl.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.12.RELEASE/spring-core-4.3.12.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4174">
-          <caret line="178" column="41" lean-forward="true" selection-start-line="178" selection-start-column="41" selection-end-line="178" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/StatisticControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="169" column="44" lean-forward="true" selection-start-line="169" selection-start-column="44" selection-end-line="169" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#get_cost_center_group#0;class#StatisticControl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/UploadRecordDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="36" column="31" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="31" />
+        <state relative-caret-position="115">
+          <caret line="105" selection-start-line="105" selection-end-line="105" />
         </state>
       </provider>
     </entry>
@@ -1426,20 +1315,120 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/FileUploadService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
+        <state relative-caret-position="-218">
           <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/StatisticControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="754">
+          <caret line="169" column="44" lean-forward="true" selection-start-line="169" selection-start-column="44" selection-end-line="169" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#get_cost_center_group#0;class#StatisticControl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/SalaryDetailDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/QueryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="112" column="94" lean-forward="true" selection-start-line="112" selection-start-column="7" selection-end-line="112" selection-end-column="94" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#departmentAtDateExist#0;class#QueryService#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/UploadRecordDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/EmployeeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/EmployeeDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="42" column="32" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="32" />
+          <folding>
+            <element signature="n#select#4;n#mapper#0;n#!!top" />
+            <element signature="n#select#5;n#mapper#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/SalaryDetailDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="156" selection-start-line="202" selection-start-column="16" selection-end-line="202" selection-end-column="34" />
+          <folding>
+            <element signature="n#insert#0;n#mapper#0;n#!!top" />
+            <element signature="n#foreach#0;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#delete#0;n#mapper#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/SalaryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="135" column="31" selection-start-line="135" selection-start-column="16" selection-end-line="135" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/dao/EmployeeDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="128" column="50" lean-forward="true" selection-start-line="115" selection-start-column="7" selection-end-line="128" selection-end-column="50" />
+          <folding>
+            <element signature="method#insertEmployee#0;class#EmployeeDaoTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/DataParse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1095">
+          <caret line="99" column="38" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/FileUploadControl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-729">
-          <caret line="100" column="38" lean-forward="true" selection-start-line="100" selection-start-column="38" selection-end-line="100" selection-end-column="38" />
+        <state relative-caret-position="-1203">
+          <caret line="131" column="33" lean-forward="true" selection-start-line="131" selection-start-column="33" selection-end-line="131" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1410#1411#0" expanded="true" />
-            <element signature="e#1460#1461#0" expanded="true" />
+            <element signature="method#setFileUploadService#0;class#FileUploadControl#0" />
             <element signature="docComment;method#getIpAddress#0;class#FileUploadControl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ManualControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="250" lean-forward="true" selection-start-line="250" selection-end-line="250" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

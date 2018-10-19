@@ -41,7 +41,7 @@ public class QueryService {
      */
     @Transactional(readOnly = true)
     public int departmentAtDateExist(String department, Date date) {
-        return employeeDao.depAndDateIsExist(department, date);
+        return employeeDao.depAndDateExist(department, date).size();
     }
 
     /**

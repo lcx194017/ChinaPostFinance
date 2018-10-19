@@ -1,5 +1,6 @@
 package dao;
 
+import domain.Employee;
 import domain.SalaryDetail;
 
 import java.util.Date;
@@ -20,6 +21,9 @@ public interface SalaryDetailDao {
 
     /**对某员工某月的数据进行更新*/
     void updateSalaryDetail(SalaryDetail salaryDetail);
+
+    /**根据员工ID和日期删除旧数据*/
+    void deleteSalaryRecord(List<Employee> list);
 
     /**根据员工ID和日期进行查询*/
     List<SalaryDetail> getSalaryDetailByIDAndDate(String id, Date date);

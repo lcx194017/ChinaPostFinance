@@ -38,44 +38,6 @@ public class ManualControl {
         this.queryDataHandleService = queryDataHandleService;
     }
 
-//    @RequestMapping(value = "base", method = RequestMethod.POST)
-//    public void departmentThree_base( @RequestParam("department") String department,
-//                                     HttpServletResponse response) {
-//        if (department.equals("空侧责任中心")) {}
-//        else if (department.equals("陆侧责任中心")){}
-//        else if (department.equals("")) {}
-//        else if (department.equals("")) {}
-//        else if (department.equals("")) {}
-//        else  if (department.equals("")) {}
-//        else if (de)
-//
-//        HashMap<String, Object> params = new HashMap<>();
-//        if (department != null && department.size() != 0)
-//            params.put("department", department);
-//        Map<String, Object> map = null;
-//        String result = null;
-//        try {
-//            map = queryService.operationAreaDynamicQuery(params);
-//        } catch (RecordInvalidException e) {
-//            e.printStackTrace();
-//            result = "{\"error\": -101}";
-//        }
-//        if (map != null) {
-//            List<Employee> employeeList = (List<Employee>) map.get("employeeList");
-//            List<SalaryDetail> salaryDetailList = (List<SalaryDetail>) map.get("salaryDetailList");
-//            result = queryDataHandleService.generateOperationAreaJsonData(employeeList, salaryDetailList);
-//        }
-//
-//        response.setContentType("text/html;charset=UTF-8");
-//        response.setHeader("Access-Control-Allow-Origin", "*");
-//        try {
-//            response.getWriter().println(result);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
-
     @RequestMapping(value = "/base/get_base_group_data", method = RequestMethod.POST)
     public void departmentThree_base_getBaseGroupData(@RequestParam("startTime") String startTime,
                                                       @RequestParam("endTime") String endTime,
@@ -255,94 +217,13 @@ public class ManualControl {
         }
     }
 
-//    @RequestMapping(value = "/department_three/link/get_link_data", method = RequestMethod.POST)
-//    public void departmentThree_link(@RequestParam("startTime") String startTime,
-//                                     @RequestParam("endTime") String endTime,
-//                                     @RequestParam("flat") List<String> flat,
-//                                     @RequestParam("air") List<String> air,
-//                                     @RequestParam("ground") List<String> ground,
-//                                     HttpServletResponse response) {
-//        HashMap<String, Object> params = new HashMap<>();
-//        //输入String日期转换成Date格式
-//        dateTransform(params, startTime, endTime);
-//        if (flat != null && flat.size() != 0)
-//            params.put("flat", flat);
-//        if (air != null && air.size() != 0)
-//            params.put("air", air);
-//        if (ground != null && ground.size() != 0)
-//            params.put("ground", ground);
-//        String result = null;
-//        Map<String, Object> map = null;
-//        try {
-//            map = queryService.productionLinkDynamicQuery(params);
-//        } catch (RecordInvalidException e) {
-//            e.printStackTrace();
-//            result = "{\"error\": -111}";
-//        }
-//        if (map != null) {
-//            List<Employee> employeeList = (List<Employee>) map.get("employeeList");
-//            List<SalaryDetail> salaryDetailList = (List<SalaryDetail>) map.get("salaryDetailList");
-//            result = queryDataHandleService.generateOperationLinkJsonData(employeeList, salaryDetailList, flat, air, ground);
-//        }
-//        response.setContentType("text/html;charset=UTF-8");
-//        //设置跨域请求
-//        response.setHeader("Access-Control-Allow-Origin", "*");
-//
-//        try {
-//            response.getWriter().println(result);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+//    /**
+//     * 测试匹配id
+//     */
+//    @RequestMapping(value = "/test/{id}", method = RequestMethod.GET)
+//    public void test() {
+//        System.out.println("test success!");
 //    }
-
-//    @RequestMapping(value = "/department_three/link/get_link_detail_data", method = RequestMethod.POST)
-//    public void departmentThree_detail(@RequestParam("startTime") String startTime,
-//                                       @RequestParam("endTime") String endTime,
-//                                       @RequestParam("flat") List<String> flat,
-//                                       @RequestParam("air") List<String> air,
-//                                       @RequestParam("ground") List<String> ground,
-//                                       HttpServletResponse response) {
-//        HashMap<String, Object> params = new HashMap<>();
-//        //输入String日期转换成Date格式
-//        dateTransform(params, startTime, endTime);
-//        if (flat != null && flat.size() != 0)
-//            params.put("flat", flat);
-//        if (air != null && air.size() != 0)
-//            params.put("air", air);
-//        if (ground != null && ground.size() != 0)
-//            params.put("ground", ground);
-//        String result = null;
-//        Map<String, Object> map = null;
-//        try {
-//            map = queryService.productionLinkDynamicQuery(params);
-//        } catch (RecordInvalidException e) {
-//            e.printStackTrace();
-//            result = "{\"error\": -112}";
-//        }
-//        if (map != null) {
-//            List<Employee> employeeList = (List<Employee>) map.get("employeeList");
-//            List<SalaryDetail> salaryDetailList = (List<SalaryDetail>) map.get("salaryDetailList");
-//            result = queryDataHandleService.generateOperationLinkDetailJsonData(employeeList,
-//                    salaryDetailList);
-//        }
-//        response.setContentType("text/html;charset=UTF-8");
-//        //设置跨域请求
-//        response.setHeader("Access-Control-Allow-Origin", "*");
-//
-//        try {
-//            response.getWriter().println(result);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
-    /**
-     * 测试匹配id
-     */
-    @RequestMapping(value = "/test/{id}", method = RequestMethod.GET)
-    public void test() {
-        System.out.println("test success!");
-    }
 
     static void dateTransform(Map<String, Object> map, String startTime, String endTime) {
         if (!startTime.equals("")) {
