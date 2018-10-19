@@ -71,7 +71,7 @@
 
     <select id="depAndDateExist" resultMap="employeeMap">
         SELECT * FROM employee
-        WHERE `department` #{param1} AND `expiration_date` = #{param2}
+        WHERE `department` = #{param1} AND `expiration_date` = #{param2}
     </select>
 
     <select id="getEmployeeByLink" resultMap="employeeMap" parameterType="String">

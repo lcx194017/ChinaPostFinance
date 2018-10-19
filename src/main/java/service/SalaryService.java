@@ -98,14 +98,14 @@ public class SalaryService {
             Set<String> keySet = employeeMap.keySet();
             List<Employee> emp_list = new LinkedList<>();
             for (String key : keySet) {
-                Employee emp= employeeMap.get(key);
-                employee.setExpiration_date(date);
+                Employee emp = employeeMap.get(key);
+                emp.setExpiration_date(date);
                 emp_list.add(emp);
             }
             employeeDao.insertEmployeeBatch(emp_list);
 
             keySet = salaryDetailMap.keySet();
-            List<SalaryDetail>sal_list = new LinkedList<>();
+            List<SalaryDetail> sal_list = new LinkedList<>();
             for (String key : keySet) {
                 SalaryDetail salaryDetail = salaryDetailMap.get(key);
                 salaryDetail.setPay_date(date);
@@ -121,8 +121,10 @@ public class SalaryService {
     @Transactional
     public void deleteOldData(String department, Date date) {
         List<Employee> employeeList = employeeDao.depAndDateExist(department, date);
-        salaryDetailDao.deleteSalaryRecord(employeeList);
-        employeeDao.deleteByDepartmentDate(department, date);
+        if (employeeList.size() != 0) {
+            salaryDetailDao.deleteSalaryRecord(employeeList);
+            employeeDao.deleteByDepartmentDate(department, date);
+        }
     }
 
     /**
